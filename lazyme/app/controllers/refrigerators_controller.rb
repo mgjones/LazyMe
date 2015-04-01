@@ -1,7 +1,7 @@
 class RefrigeratorsController < ApplicationController
 
 def index
-  @refrigerators = Refrigerator.all
+  @refrigerators = params[:sort] ? Refrigerator.sorted_by(params[:sort]) : Refrigerator.sorted_by("name")
 end
 
 def show

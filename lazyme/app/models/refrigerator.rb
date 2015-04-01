@@ -1,9 +1,13 @@
 class Refrigerator < ActiveRecord::Base
 
+  def price_range(min, max)
+    #@refrigerators
+  end
+
   def self.sorted_by(field)
-    if Product.column_names.include?(field)
-      return Product.order(field)
+    if Refrigerator.column_names.include?(field)
+      return Refrigerator.order(field)
     end
-    return Product.order("name")
+    return Refrigerator.order("name")
   end
 end
