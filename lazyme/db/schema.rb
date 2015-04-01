@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150331034353) do
+ActiveRecord::Schema.define(version: 20150401011929) do
 
   create_table "refrigerators", force: :cascade do |t|
     t.string   "name"
+    t.string   "brand"
     t.decimal  "price",       precision: 10, scale: 2
-    t.integer  "rating"
-    t.text     "description"
+    t.decimal  "rating",      precision: 1,  scale: 1
+    t.decimal  "popularity",  precision: 1,  scale: 2
+    t.text     "keyfeatures"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
   end
