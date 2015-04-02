@@ -32,8 +32,21 @@ td .add_link{
 }
 
 table.refrigerators_table{
-  background: black;
+  background: white;
   font-weight: 200;
   padding: 30px;
-  border: 15px double white;
+  border: 15px double black;
 }
+
+a:link{
+  color: rgb(0,130,0);
+}
+
+a:hover{
+  color:red;
+}
+
+a:active{
+  color:purple;
+}
+
