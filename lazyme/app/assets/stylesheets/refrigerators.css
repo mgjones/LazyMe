@@ -1,37 +1,28 @@
 body {
   font-family: Courier New, Sans-serif;
-  font-size: 6pt;
+  font-size: 30pt;
+  color: black;
   font-weight: 900;
   position: center;
   font-style: normal;
   text-align: center;
-  background-image: url(refrigerator.jpg);
-  background-color: #cccccc;
+  background: url("refrigerator2.jpg");
+  
 }
 
 body #main {
-  background-color: rgb(255,130,255);
-  font-size: 18pt;
-  color: yellow;
+  font-size: 20pt;
+  color: rgb(255,130,255);
   text-align: center;
-  padding: 15px;
-  border: 8px double white;
-  border-radius: 15px;
 }
 
 h3.title {
   font-family: Comic;
   font-size: 18pt;
-  color: yellow;
+  color: rgb(255,130,255);
   position: inherit;
   top: 100px;
   
 
 }
 
-
-table.refrigerators_table {
-  position: absolute;
-  right: 20px;
-
-}
