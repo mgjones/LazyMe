@@ -1,8 +1,28 @@
 body {
-  font-family: Courier New, sans-serif;
-  font-size: 13pt;
-  font-weight: 900;
-  font-style: normal;
-  background-color: rgb(255,130,255);
+  font-family: Courier New, Sans-serif;
+  font-size: 30pt;
   color: black;
+  font-weight: 900;
+  position: center;
+  font-style: normal;
+  text-align: center;
+  background: url("refrigerator2.jpg");
+  
 }
+
+body #main {
+  font-size: 20pt;
+  color: rgb(255,130,255);
+  text-align: center;
+}
+
+h3.title {
+  font-family: Comic;
+  font-size: 18pt;
+  color: rgb(255,130,255);
+  position: inherit;
+  top: 100px;
+  
+
+}
+
