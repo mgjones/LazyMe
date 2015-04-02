@@ -1,12 +1,13 @@
 body {
   font-family: Courier New, Sans-serif;
   font-size: 30pt;
-  color: black;
+  color: yellow;
   font-weight: 900;
   position: center;
   font-style: normal;
   text-align: center;
-  background: url("refrigerator2.jpg");
+  background: url("iceberg.jpg");
+  background-size: cover;
   
 }
 
@@ -24,5 +25,28 @@ h3.title {
   top: 100px;
   
 
+}
+td .add_link{
+  text-align: right;
+
+}
+
+table.refrigerators_table{
+  background: white;
+  font-weight: 200;
+  padding: 30px;
+  border: 15px double black;
+}
+
+a:link{
+  color: rgb(0,130,0);
+}
+
+a:hover{
+  color:red;
+}
+
+a:active{
+  color:purple;
 }
 
