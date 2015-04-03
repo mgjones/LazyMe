@@ -51,9 +51,9 @@ class RefrigeratorsController < ApplicationController
 		session.delete(:key_features)
 	    end
         end
-	#if params[:order]
-	#    session[:order]=params[:order]
-	#end
+	    #if params[:order]
+	    #    session[:order]=params[:order]
+	    #end
 
         @refrigerators = params[:sort] ? Refrigerator.sorted_by(params[:sort]) : Refrigerator.sorted_by("name")
 
@@ -74,15 +74,16 @@ class RefrigeratorsController < ApplicationController
 	end
         
         if session[:key_word] != "" && session[:key_word] != nil
-	    @refrigerators = @refrigerators.where("name like ?",session[:key_word])
+        
+	    @refrigerators = @refrigerators.where("name like ?","%#{session[:key_word]}%")
 	end
 
         if session[:brand] != "" && session[:brand] != nil
-	    @refrigerators = @refrigerators.where("brand like ?",session[:brand])
+	    @refrigerators = @refrigerators.where("brand like ?","%#session[:brand]}%")
 	end
     
         if session[:key_features] != "" && session[:key_features] != nil
-	    @refrigerators = @refrigerators.where("key_features like ?",session[:key_features])
+	    @refrigerators = @refrigerators.where("key_features like ?","%#session[:key_features]%")
 	end
     end
 
@@ -90,19 +91,7 @@ class RefrigeratorsController < ApplicationController
         @refrigerator = Refrigerator.find(params[:id])
     end
 
-    def price_range(min, max)
-        if (min == nil) and (max != nil)
-            return Refrigerator.where('price >= 0').where('price <= max')
-        elsif (min and max != nil)
-            return Refrigerator.where('min <= price').where('price <= max')
-        elsif (min and max == nil)
-            return Refrigerator.order("name")
-        else
-            return Refrigerator.order("name")
-        end
-
-        #@refrigerators
-    end
+    
 
     
     
