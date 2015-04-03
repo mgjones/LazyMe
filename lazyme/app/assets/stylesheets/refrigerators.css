@@ -50,17 +50,17 @@ a:active{
   color:purple;
 }
 
-#search_field {
+#looking_for {
   padding: 8px 15px;
-  background:rgba(255, 255, 255, .2);
+  background:rgba(255, 255, 255, .5);
   border: 0px solid #dbdbdb;
   width: 500px
 }
 
-#search_button {
+.search_button {
     position:relative;
     padding:6px 15px;
-    left:-8px;
+    left: -30px;
     border:2px solid #207cca;
     background-color:#207cca;
     color:#fafafa;
