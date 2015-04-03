@@ -1,6 +1,11 @@
 class RefrigeratorsController < ApplicationController
 
     def index
+        if params[:commit] == "Search"
+            if params[:looking_for] == ""
+                redirect_to searchs_path
+            end
+        end
         if ((params[:commit] == "Filter") || (params[:commit] == "Search"))
             params.each do |p|
                 if ((p[0] != "utf8") && (p[0] != "commit"))
@@ -16,7 +21,6 @@ class RefrigeratorsController < ApplicationController
             end
 
         end
-
 
         @refrigerators = params[:sort] ? Refrigerator.sorted_by(params[:sort]) : Refrigerator.sorted_by("name")
         
