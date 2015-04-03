@@ -19,7 +19,4 @@ Feature: Filter refrigerator
     And I fill in "min" with ""
     And I press "Filter"
 
-  Scenario: Show
-    When I go to the refrigerators page
-    And I follow "Washer-3000"
-    And I should see "detail"
+  

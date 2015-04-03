@@ -27,3 +27,9 @@ Feature: Search refrigerator
     Then I should be on the refrigerators page
     #And I should see "George Foreman Fridge"
     And I should not see "Washer-3004"
+
+  Scenario: Empty Search
+    When I go to the searchs page
+    And I fill in "looking_for" with ""
+    And I press "Search"
+    Then I should be on the searchs page
