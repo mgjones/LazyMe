@@ -50,7 +50,7 @@ class RefrigeratorsController < ApplicationController
 	end
     
         if session[:key_features] != "" && session[:key_features] != nil
-	    @refrigerators = @refrigerators.where("key_features like ?","%#session[:key_features]%")
+	    @refrigerators = @refrigerators.where("keyfeatures like ?","%#session[:key_features]%")
 	end
     end
 
