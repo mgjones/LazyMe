@@ -1,62 +1,24 @@
 class RefrigeratorsController < ApplicationController
 
     def index
-        if params[:commit] == "Filter"
-	    if params[:min]
-		session[:min] = params[:min]
-	    else
-		session.delete(:min)
-	    end
-	    if params[:max]
-		session[:max]=params[:max]
-	    else
-		session.delete(:max)
-	    end
-            if params[:rating]
-		session[:rating]=params[:rating]
-	    else
-		session.delete(:rating)
-	    end
-            
+        if ((params[:commit] == "Filter") || (params[:commit] == "Search"))
+            params.each do |p|
+                if ((p[0] != "utf8") && (p[0] != "commit"))
+                    ## for each param in params hash
+                    ## put it into the session hash
+                    if params[p[0].to_sym]
+                        session[p[0].to_sym] = params[p[0].to_sym]
+                    else
+                        session.delete(p[0].to_sym)
+
+                    end
+                end
+            end
+
         end
-        if params[:commit] == "Search"
-            if params[:key_word]
-		session[:key_word]=params[:key_word]
-	    else
-		session.delete(:key_word)
-	    end
-            if params[:price]
-		session[:price]=params[:price]
-	    else
-		session.delete(:price)
-	    end    
-            if params[:brand]
-		session[:brand]=params[:brand]
-	    else
-		session.delete(:brand)
-	    end
-            if params[:rating]
-		session[:rating]=params[:rating]
-	    else
-		session.delete(:rating)
-	    end
-            if params[:popularity]
-		session[:popularity]=params[:popularity]
-	    else
-		session.delete(:popularity)
-	    end
-            if params[:key_features]
-		session[:key_features]=params[:key_features]
-	    else
-		session.delete(:key_features)
-	    end
-        end
-	#if params[:order]
-	#    session[:order]=params[:order]
-	#end
 
         @refrigerators = params[:sort] ? Refrigerator.sorted_by(params[:sort]) : Refrigerator.sorted_by("name")
-
+        byebug
         if session[:min] != "" && session[:min] != nil
 	    @refrigerators = @refrigerators.where("price >= ?",session[:min])
 	end
