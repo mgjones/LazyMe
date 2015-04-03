@@ -1,9 +1,10 @@
 #search
  
   =form_tag refrigerators_path,method:"get" do
+
     I am looking for ...
     %br
-    =text_field_tag "search_field"
+    =text_field_tag(:looking_for) 
     
     =submit_tag "Search" , class: "search_button"
 

@@ -17,8 +17,9 @@ class RefrigeratorsController < ApplicationController
 
         end
 
+
         @refrigerators = params[:sort] ? Refrigerator.sorted_by(params[:sort]) : Refrigerator.sorted_by("name")
-        byebug
+        
         if session[:min] != "" && session[:min] != nil
 	    @refrigerators = @refrigerators.where("price >= ?",session[:min])
 	end
@@ -36,20 +37,23 @@ class RefrigeratorsController < ApplicationController
 	end
         
         if session[:key_word] != "" && session[:key_word] != nil
-	    @refrigerators = @refrigerators.where("name like ?",session[:key_word])
+        
+	    @refrigerators = @refrigerators.where("name like ?","%#{session[:key_word]}%")
 	end
 
         if session[:brand] != "" && session[:brand] != nil
-	    @refrigerators = @refrigerators.where("brand like ?",session[:brand])
+	    @refrigerators = @refrigerators.where("brand like ?","%#session[:brand]}%")
 	end
     
         if session[:key_features] != "" && session[:key_features] != nil
-	    @refrigerators = @refrigerators.where("key_features like ?",session[:key_features])
+	    @refrigerators = @refrigerators.where("key_features like ?","%#session[:key_features]%")
 	end
     end
 
     def show
         @refrigerator = Refrigerator.find(params[:id])
+
     end    
+
 
 end
