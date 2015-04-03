@@ -17,7 +17,7 @@ Feature: Search refrigerator
 
 
   Scenario: Advance Search with refrigerator
-    When i go to the search page
+    When I go to the search page
     And I fill in "key_word" with "George Foreman Fridge"
     #And I fill in "brand" with ""
     #And I fill in "rating" with ""

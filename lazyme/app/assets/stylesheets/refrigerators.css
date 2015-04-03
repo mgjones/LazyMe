@@ -1,8 +1,52 @@
 body {
-  font-family: Courier New, sans-serif;
-  font-size: 13pt;
+  font-family: Courier New, Sans-serif;
+  font-size: 30pt;
+  color: yellow;
   font-weight: 900;
+  position: center;
   font-style: normal;
-  background-color: rgb(255,130,255);
-  color: black;
+  text-align: center;
+  background: url("iceberg.jpg");
+  background-size: cover;
+  
 }
+
+body #main {
+  font-size: 20pt;
+  color: rgb(255,130,255);
+  text-align: center;
+}
+
+h3.title {
+  font-family: Comic;
+  font-size: 18pt;
+  color: rgb(255,130,255);
+  position: inherit;
+  top: 100px;
+  
+
+}
+td .add_link{
+  text-align: right;
+
+}
+
+table.refrigerators_table{
+  background: white;
+  font-weight: 200;
+  padding: 30px;
+  border: 15px double black;
+}
+
+a:link{
+  color: rgb(0,130,0);
+}
+
+a:hover{
+  color:red;
+}
+
+a:active{
+  color:purple;
+}
+
