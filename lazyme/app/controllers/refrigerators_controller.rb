@@ -52,11 +52,8 @@ class RefrigeratorsController < ApplicationController
 
     def show
         @refrigerator = Refrigerator.find(params[:id])
-    end
 
-    
+    end    
 
-    
-    
 
 end
