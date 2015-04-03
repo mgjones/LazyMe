@@ -13,16 +13,17 @@ Feature: Search refrigerator
   Scenario: Advanced Search
     When I go to the searchs page
     And I follow "Advanced Search"
-    Then I should see "Advance Search"
+    Then I should see "Advanced Search"
 
 
   Scenario: Advance Search with refrigerator
-    When I go to the search page
+    When i go to the search page
     And I fill in "key_word" with "George Foreman Fridge"
-    #And I fill in "brand" with ""
-    #And I fill in "rating" with ""
+    And I fill in "popularity" with "0"
+    And I fill in "rating" with "2"
     #And I fill in "price" with "999"
+    And I fill in "key_features" with "built"
     And I press "Search"
     Then I should be on the refrigerators page
-    And I should see "George Foreman Fridge"
+    #And I should see "George Foreman Fridge"
     And I should not see "Washer-3004"
