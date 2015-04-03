@@ -3,8 +3,8 @@
   =form_tag refrigerators_path,method:"get" do
     I am looking for ...
     %br
-    =text_field_tag(:minimum_age) 
+    =text_field_tag "search_field"
     
-    =submit_tag "Search"
+    =submit_tag "Search" , class: "search_button"
 
   %p=link_to "Advanced Search", search_path(id:1) 
