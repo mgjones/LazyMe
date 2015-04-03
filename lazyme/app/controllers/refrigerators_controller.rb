@@ -19,7 +19,7 @@ class RefrigeratorsController < ApplicationController
 
 
         @refrigerators = params[:sort] ? Refrigerator.sorted_by(params[:sort]) : Refrigerator.sorted_by("name")
-        byebug
+        
         if session[:min] != "" && session[:min] != nil
 	    @refrigerators = @refrigerators.where("price >= ?",session[:min])
 	end

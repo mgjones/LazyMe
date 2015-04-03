@@ -25,6 +25,8 @@ module NavigationHelpers
     when /^search page$/
       
       search_path(id:1)
+    when /^refrigerator page$/
+      refrigerator_path(id:1)
 
     else
       begin
