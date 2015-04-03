@@ -7,13 +7,15 @@
   =#%h4= flash[:warning] if flash[:warning]
   
   =form_tag 'filter', :method => :get do
-    =label_tag "price"
-    =number_field_tag :price
+    =label_tag "price range from"
+    =number_field_tag :min
+    to
+    =number_field_tag :max
 
     =label_tag "rating"
     =number_field_tag :rating
   
-    =submit_tag 'filter'
+    =submit_tag 'Filter'
   %br
   
   %table.refrigerators_table
