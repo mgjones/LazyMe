@@ -1,0 +1,130 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/helpers/refrigerators_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/helpers/searchs_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/controllers/refrigerators_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/controllers/searchs_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/models/refrigerator.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1428019213
+  },
+  "Cucumber Features": {
+    "coverage": {
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/controllers/searchs_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/helpers/refrigerators_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/helpers/searchs_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/controllers/refrigerators_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/Desktop/cosc480/LazyMe/lazyme/app/models/refrigerator.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1428019239
+  }
+}

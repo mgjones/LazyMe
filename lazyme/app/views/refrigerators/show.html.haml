@@ -9,12 +9,22 @@
 
   %p
     %table.refrigerator_table
-      %tr
-        %td.image Image
-        %td.brand=@refrigerator.brand
-        %td.price=@refrigerator.price
-        %td.rating=@refrigerator.rating
-        %td.popularity=@refrigerator.popularity
+      %tr.refrigerator_header
+        %th Image
+        %th Brand
+        %th Price
+        %th Rating
+        %th Popularity
+       
+       
+        %tr
+          %td.image Image
+          %td.brand=@refrigerator.brand
+          %td.price=@refrigerator.price
+          %td.rating=@refrigerator.rating
+          %td.popularity=@refrigerator.popularity
+    %br
+    %br
 
     %table.review_table
       %tr

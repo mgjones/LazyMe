@@ -49,6 +49,11 @@ When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+When(/^i go to the search page$/) do 
+  visit path_to("search page")
+end
+
+
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
 end
