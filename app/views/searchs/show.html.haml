@@ -1,0 +1,31 @@
+#main
+
+  %h3 Advanced Search
+
+
+  =form_tag refrigerators_path,method:"get" do
+    %br
+      Key word
+      =text_field_tag(:key_word) |
+    %br
+      Price
+      =text_field_tag(:price)
+    %br
+      Brand
+      =text_field_tag(:brand)
+    %br
+      Key feature
+      =text_field_tag(:key_features)
+    %br
+      Rating
+      =text_field_tag(:rating)
+    
+    %br
+      Popularity
+      =text_field_tag(:popularity)
+    
+    %br.search
+      =submit_tag "Search"
+
+
+=link_to "Back to search", searchs_path

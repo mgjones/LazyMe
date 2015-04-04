@@ -1,0 +1,19 @@
+body.title {
+  font-family: Courier New, Sans-serif;
+  font-size: 30pt;
+  color: yellow;
+  font-weight: 900;
+  text-shadow: 2px 2px 0 gray,
+               2px 2px 0 gray,
+               3px 3px 0 white,
+               4px 4px 0 white,
+               5px 5px 0 white,
+               6px 6px 0 white;
+  position: center;
+  font-style: normal;
+  text-align: center;
+  background: url("iceberg.jpg");
+  background-size: cover;
+  
+}
+
