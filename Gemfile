@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'haml-rails'
-
+gem 'heroku'
 gem "paperclip", "~>4.2"
 
 
@@ -43,6 +43,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :test do
   gem 'simplecov', :require => false
   gem 'database_cleaner'
+  gem 'sqlite3'
 end
 
 
