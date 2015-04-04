@@ -1,0 +1,11 @@
+/home/csvm/.rvm/rubies/ruby-2.2.0/bin/ruby -r ./siteconf20150403-8813-smc2yx.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20150403-8813-ev51wm

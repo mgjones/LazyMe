@@ -1,0 +1,15 @@
+/home/csvm/.rvm/rubies/ruby-2.2.0/bin/ruby -r ./siteconf20150403-8813-u4xrim.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling context.c
+compiling threads.c
+compiling byebug.c
+compiling breakpoint.c
+compiling locker.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20150403-8813-8xa9tp/byebug
