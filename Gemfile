@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails'
 gem 'heroku'
 gem "paperclip", "~>4.2"
-ruby '1.9.3'
+ruby '2.2.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
