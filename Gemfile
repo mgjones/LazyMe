@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails'
 gem 'heroku'
 gem "paperclip", "~>4.2"
-gem 'ruby'
+ruby '1.9.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -50,7 +50,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
