@@ -1,6 +1,7 @@
 class RefrigeratorsController < ApplicationController
 
     def index
+        @refrigerators = Refrigerator.all
         if params[:commit] == "Search"
             if params[:looking_for] == ""
                 redirect_to searchs_path
@@ -23,10 +24,11 @@ class RefrigeratorsController < ApplicationController
         end
 
         if params[:commit] == "Filter"
-            @refrigerators = Refrigerator.filter(params.slice(:min, :max, :rating, :popularity, :key_word, :brand, :key_features))
+            @refrigerators = @refrigertors.filter(params.slice(:min, :max, :rating, :popularity, :key_word, :brand, :key_features))
         end
-
-        @refrigerators = params[:sort] ? Refrigerator.sorted_by(params[:sort]) : Refrigerator.sorted_by('name')
+       
+        @refrigerators = params[:sort] ? @refrigerators.sorted_by(params[:sort]) : @refrigerators.sorted_by('name')
+        
     end
 
     def show
