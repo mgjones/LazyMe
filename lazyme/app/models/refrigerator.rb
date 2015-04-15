@@ -1,7 +1,6 @@
 class Refrigerator < ActiveRecord::Base
   include Filterable
- 
-  default_scope { order('name') }
+  
   scope :min, ->(min) { where("price >= ?", min) }
   scope :max, ->(max) { where("price <= ?", max) }
   scope :rating, ->(min_rating) { where("rating >= ?", min_rating) }
