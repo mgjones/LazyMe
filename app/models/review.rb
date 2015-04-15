@@ -9,6 +9,8 @@ class Review < ActiveRecord::Base
     end
 
     def description
-
+        #write the review of the refrigerator
+        
     end
+
 end

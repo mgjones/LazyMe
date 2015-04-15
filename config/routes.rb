@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   root 'searchs#index'
+
+  resources :refrigerators #, :searchs, :reviews
+
   resources :refrigerators do
-    resources :reviews, :only => [:create,:new]
+    resources :reviews #, :only => [:create,:new]
   end
   resources :searchs
+
   
   get '/filter' => 'refrigerators#index'
   

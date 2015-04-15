@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.integer :icecube
       t.text :description
-      t.integer :refrigerator_id
+      t.references :refrigerator_id # was t.integer
       
       t.timestamps null: false
     end
