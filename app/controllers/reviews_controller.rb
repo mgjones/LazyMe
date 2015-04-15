@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 
     ## get object for new review 
     def new
-        @refrigerator = Refrigerator.find(params[:product_id])
+        @refrigerator = Refrigerator.find(params[:refrigerator_id])
         @review = Review.new
     end
 

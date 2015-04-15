@@ -27,9 +27,9 @@
     %br
 
     %table.review_table
-      %tr
-        %td.review Review
+      %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
 
+                
 
 
 =link_to "Back to Search Result", refrigerators_path
