@@ -26,7 +26,7 @@ class RefrigeratorsController < ApplicationController
             @refrigerators = Refrigerator.filter(params.slice(:min, :max, :rating, :popularity, :key_word, :brand, :key_features))
         end
 
-        @refrigerators = Refrigerator.sorted_by(params[:sort]) if params[:sort]
+        @refrigerators = params[:sort] ? Refrigerator.sorted_by(params[:sort]) : Refrigerator.sorted_by('name')
     end
 
     def show
