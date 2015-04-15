@@ -1,6 +1,7 @@
 class Refrigerator < ActiveRecord::Base
   include Filterable
-  
+ 
+  default_scope { order('name') }
   scope :min, ->(min) { where("price >= ?", min) }
   scope :max, ->(max) { where("price <= ?", max) }
   scope :rating, ->(min_rating) { where("rating >= ?", min_rating) }
@@ -11,6 +12,7 @@ class Refrigerator < ActiveRecord::Base
   
   def self.sorted_by(field)
     if Refrigerator.column_names.include?(field)
+      byebug()
       return Refrigerator.order(field)
     end
     return Refrigerator.order("name")
