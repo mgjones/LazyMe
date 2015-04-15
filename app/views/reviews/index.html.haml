@@ -1,0 +1,15 @@
+#review
+
+    =form_for [@refrigerator, @review], :method => :post do |item|
+
+        .field
+            =item.label :bar, "Gold Bars"
+            =item.number_field :bar, :in => 1..5
+
+        .field
+            =item.label :description, "Write Your Review"
+            =item.text_field :description
+
+        =item.submit "Submit This Review"
+
+    =link_to 'Go to All Reviews for this product', refrigerator_reviews_path(@refrigerator)
