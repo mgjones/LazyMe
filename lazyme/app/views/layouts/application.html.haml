@@ -1,4 +1,5 @@
 !!! 5
+
 %html
   %head
     %meta{ charset: 'utf-8' }
@@ -12,6 +13,10 @@
     
     #header
       %h1 LazyMe
+      - if flash[:notice]
+        %h4=flash[:notice]
+      - elsif flash[:warning]
+        %h4= flash[:warning] 
 
   
   

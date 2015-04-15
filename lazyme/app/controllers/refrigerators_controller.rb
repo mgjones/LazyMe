@@ -6,6 +6,7 @@ class RefrigeratorsController < ApplicationController
                 redirect_to searchs_path
             end
         end
+<<<<<<< HEAD
         if ((params[:commit] == "Filter") || (params[:commit] == "Search"))
             params.each do |p|
                 if ((p[0] != "utf8") && (p[0] != "commit"))
@@ -52,6 +53,9 @@ class RefrigeratorsController < ApplicationController
         if session[:key_features] != "" && session[:key_features] != nil
 	    @refrigerators = @refrigerators.where("keyfeatures like ?","%#session[:key_features]%")
 	end
+=======
+        @refrigerators = Refrigerator.filter(params.slice(:min, :max, :rating, :popularity, :key_word, :brand, :key_features))
+>>>>>>> upstream/master
     end
 
     def show
