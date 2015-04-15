@@ -4,9 +4,12 @@ class RefrigeratorsController < ApplicationController
         if params[:commit] == "Search"
             if params[:looking_for] == ""
                 redirect_to searchs_path
+            else
+                @refrigerators = Refrigerator.search(params[:looking_for])
             end
         end
-        
+
+        ## puts everything in params into session, but for now it's useless ##
         if ((params[:commit] == "Filter") || (params[:commit] == "Search"))
             params.each do |p|
                 if ((p[0] != "utf8") && (p[0] != "commit"))
@@ -18,9 +21,11 @@ class RefrigeratorsController < ApplicationController
                 end
             end
         end
-        
 
-        @refrigerators = Refrigerator.filter(params.slice(:min, :max, :rating, :popularity, :key_word, :brand, :key_features))
+        if params[:commit] == "Filter"
+            @refrigerators = Refrigerator.filter(params.slice(:min, :max, :rating, :popularity, :key_word, :brand, :key_features))
+        end
+
         @refrigerators = Refrigerator.sorted_by(params[:sort]) if params[:sort]
     end
 
