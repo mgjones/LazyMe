@@ -11,8 +11,13 @@ class Refrigerator < ActiveRecord::Base
   
   def self.sorted_by(field)
     if Refrigerator.column_names.include?(field)
+      byebug()
       return Refrigerator.order(field)
     end
     return Refrigerator.order("name")
+  end
+
+  def self.search(input)
+    return Refrigerator.where("name like ?", "%#{input}%")
   end
 end
