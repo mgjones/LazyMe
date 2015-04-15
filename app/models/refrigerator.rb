@@ -6,4 +6,9 @@ class Refrigerator < ActiveRecord::Base
     end
     return Refrigerator.order("name")
   end
+
+  def create_review
+    # logic for creating the review here?
+    # this might not be necessary
+  end
 end
