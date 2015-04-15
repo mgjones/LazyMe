@@ -10,12 +10,13 @@ class ReviewsController < ApplicationController
     ## create a new review
     def create 
         @refrigerators = Refrigerator.find(params[:refrigerator_id])
-        @review = Review.new(create_update_params)
-        @refrigerators.description << @review
+        @review = Review.create!(create_update_params)
+        
+        #@refrigerators.reviews << @review
 
-        if @review.save
+        if @review.save!
             flash[:notice] = 'Review successfully created.'
-            redirect_to (refrigerator_path(@refrigerator))
+            redirect_to refrigerator_path(params[:refrigerator_id])
         else
             flash[:notice] = 'Could not create new review.'
             redirect_to (new_refrigerator_review_path(@refrigerator))
