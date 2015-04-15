@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   root 'searchs#index'
-  resources :refrigerators,:searchs
+  resources :refrigerators do
+    resources :reviews, :only => [:create,:new]
+  end
+  resources :searchs
+  
   get '/filter' => 'refrigerators#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

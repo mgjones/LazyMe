@@ -1,9 +1,6 @@
 class Review < ActiveRecord::Base
 
     belongs_to :refrigerator
-
-    def create
-        
-    end
+    # changes that can be made to the review itself
 
 end
