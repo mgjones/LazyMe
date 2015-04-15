@@ -17,4 +17,8 @@ class Refrigerator < ActiveRecord::Base
     end
     return Refrigerator.order("name")
   end
+
+  def self.search(input)
+    return Refrigerator.where("name like ?", "%#{input}%")
+  end
 end
