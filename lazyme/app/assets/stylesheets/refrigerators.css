@@ -52,11 +52,16 @@ a:active{
 
 #looking_for {
   padding: 8px 15px;
-  background:rgba(255, 255, 255, .5);
+  background:rgba(255, 255, 255, .3);
   border: 0px solid #dbdbdb;
   width: 500px
 }
-
+br.underbar {
+    height: 3px;
+    width: 500px;
+    background: rgb(0,0,0);
+    border-bottom: 1px solid;
+}
 .search_button {
     position:relative;
     padding:6px 15px;
