@@ -1,5 +1,7 @@
 class Refrigerator < ActiveRecord::Base
-  has_many :reviews
+
+  has_many :reviews, foreign_key: "refrigerator_id"
+  
   def self.sorted_by(field)
     if Refrigerator.column_names.include?(field)
       return Refrigerator.order(field)

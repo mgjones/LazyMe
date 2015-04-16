@@ -4,8 +4,8 @@
     =form_for [@refrigerator, @review], :method => :post do |item|
 
         .field
-            =item.label :icecube, "Cube Rating"
-            =item.number_field :icecube, :in => 1..5
+            =item.label :icecubes, "Cube Rating"
+            =item.number_field :icecubes, :in => 1..5
 
         .field
             %p=item.label :description, "Write Your Review"

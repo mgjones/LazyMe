@@ -29,15 +29,13 @@
     %table.review_table
       %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
       
-    
+    -#byebug()
     %table.reviews
       %tr All Product Reviews
-      -@refrigerator.reviews.each do |i|
-        %td=i.description
-        %td=i.icecubes
-
-
-    =link_to "View All Reviews for this Product", refrigerator_reviews_path(@refrigerator)
+      - #fridge = p.refrigerator
+      - @refrigerator.reviews do |i|
+        %tr
+          %td=i.description
                 
 
 
