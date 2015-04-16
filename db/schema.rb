@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150415191725) do
+=======
+ActiveRecord::Schema.define(version: 20150416021117) do
+>>>>>>> a35734c9e24060fb54f8191eb044611d5efa4ba3
 
   create_table "refrigerators", force: :cascade do |t|
     t.string   "name"
@@ -25,9 +29,37 @@ ActiveRecord::Schema.define(version: 20150415191725) do
   end
 
   create_table "reviews", force: :cascade do |t|
+<<<<<<< HEAD
     t.integer "refrigerator_id"
     t.integer "icecubes"
     t.text    "description"
+=======
+    t.integer  "icecube"
+    t.text     "description"
+    t.integer  "refrigerator_id_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+>>>>>>> a35734c9e24060fb54f8191eb044611d5efa4ba3
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "uid"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
