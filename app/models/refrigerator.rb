@@ -1,6 +1,16 @@
 class Refrigerator < ActiveRecord::Base
+  include Filterable
+ 
+  has_many :reviews, foreign_key:  "refrigerator_id"
 
-  has_many :reviews, foreign_key: "refrigerator_id"
+  scope :price, ->(price) { where("price >= ?", price) }
+  scope :min, ->(min) { where("price >= ?", min) }
+  scope :max, ->(max) { where("price <= ?", max) }
+  scope :rating, ->(min_rating) { where("rating >= ?", min_rating) }
+  scope :popularity, ->(min_pop) { where("popularity >= ?", min_pop) }
+  scope :key_word, ->(key_word) { where("name like ?", "%#{key_word}%") }
+  scope :brand, ->(brand) { where("brand like ?", "%#{brand}%") }
+  scope :key_features, ->(key_features) { where("keyfeatures like ?", "%#{key_features}%") }
   
   def self.sorted_by(field)
     if Refrigerator.column_names.include?(field)
@@ -9,8 +19,7 @@ class Refrigerator < ActiveRecord::Base
     return Refrigerator.order("name")
   end
 
-  def create_review
-    # logic for creating the review here?
-    # this might not be necessary
+  def self.search(input)
+    return Refrigerator.where("name like ?", "%#{input}%")
   end
 end
