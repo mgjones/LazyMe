@@ -31,6 +31,10 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+And /^(?:|I )press "([^"]*)"$/ do |button|
+  click_button(button)
+end
+
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
   with_scope(parent) { When step }
@@ -109,6 +113,7 @@ end
 When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   attach_file(field, File.expand_path(path))
 end
+
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   if page.respond_to? :should
@@ -260,3 +265,11 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+
+
+Then /^I should see the new review listed under "(.*?)"$/ do |arg1|
+  
+  pending # express the regexp above with the code you wish you had
+end
+

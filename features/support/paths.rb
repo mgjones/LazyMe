@@ -22,11 +22,16 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
     
+    
+
     when /^search page$/
-      
       search_path(id:1)
+
     when /^refrigerator page$/
       refrigerator_path(id:1)
+      
+    when /^refrigerators page$/
+      refrigerator_id_reviews_new(id:1)
 
     else
       begin
