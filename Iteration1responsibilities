@@ -1,0 +1,15 @@
+Junrui Ye
+Nolan Gonzalez
+Mariah Jones
+
+Iteration 1: 4/3/15
+
+For this iteration we met as a group to discuss the stories we would address.
+We constructed the main website layout/setup in the testing development.
+
+Junrui Ye: Constructed tests for the refrigerator page and search page. Implemented the model and controller.
+
+Nolan Gonzalez: Created the filtering for the refrigerator page. Designed the index and show pages for the refrigerator and search pages.
+
+Mariah Jones: Designed the web page using css. Deployed app to Heroku.
+

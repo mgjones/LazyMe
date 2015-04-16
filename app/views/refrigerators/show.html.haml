@@ -1,0 +1,35 @@
+#main
+  - if flash[:notice]
+    %p=flash[:notice]
+  - elsif flash[:warning]
+    %p= flash[:warning]  
+
+
+  %h3 Detail for #{@refrigerator.name}
+
+  %p
+    %table.refrigerator_table
+      %tr.refrigerator_header
+        %th Image
+        %th Brand
+        %th Price
+        %th Rating
+        %th Popularity
+       
+       
+        %tr
+          %td.image Image
+          %td.brand=@refrigerator.brand
+          %td.price=@refrigerator.price
+          %td.rating=@refrigerator.rating
+          %td.popularity=@refrigerator.popularity
+    %br
+    %br
+
+    %table.review_table
+      %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
+
+                
+
+
+=link_to "Back to Search Results", refrigerators_path
