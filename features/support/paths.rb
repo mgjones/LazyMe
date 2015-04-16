@@ -28,10 +28,8 @@ module NavigationHelpers
       search_path(id:1)
 
     when /^refrigerator page$/
-      refrigerator_path(id:1)
+      refrigerator_path(:id) ## was id:1
       
-    when /^refrigerators page$/
-      refrigerator_id_reviews_new(id:1)
 
     else
       begin

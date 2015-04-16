@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
     ## get object for new review 
     def new
         @refrigerator = Refrigerator.find(params[:refrigerator_id])
-        @review = Review.new(@review)
+        @review = Review.new
     end
 
     ## create a new review
@@ -12,7 +12,6 @@ class ReviewsController < ApplicationController
         @refrigerator = Refrigerator.find(params[:refrigerator_id])
         @review = Review.create(create_update_params)
         @refrigerator.reviews << @review
-
         if @review.save!
 
             flash[:notice] = 'Review successfully created.'
