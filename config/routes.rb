@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     { omniauth_callbacks: "omniauth_callbacks" }
   root 'searchs#index'
 
-  resources :searchs #, :searchs, :reviews
+  resources :searchs
 
   resources :refrigerators do
     resources :reviews, :only => [:create,:new]
