@@ -1,2 +1,0 @@
-# RSPEC TESTS HERE
-
