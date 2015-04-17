@@ -22,4 +22,9 @@ class Refrigerator < ActiveRecord::Base
   def self.search(input)
     return Refrigerator.where("name like ?", "%#{input}%")
   end
+
+  def popularity_update
+    self.popularity = self.popularity + 1
+    self.save
+  end
 end

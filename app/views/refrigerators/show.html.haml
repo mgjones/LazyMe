@@ -3,7 +3,8 @@
     %p=flash[:notice]
   - elsif flash[:warning]
     %p= flash[:warning]  
-
+  
+  - @refrigerator.popularity_update
 
   %h3 Detail for #{@refrigerator.name}
 
