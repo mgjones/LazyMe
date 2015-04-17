@@ -21,6 +21,7 @@
   %table.refrigerators_table
     %tr.refrigerators_header
       %th= link_to("name", refrigerators_path(:sort => "name"))
+      %th= link_to("brand", refrigerators_path(:sort => "brand"))
       %th= link_to("price", refrigerators_path(:sort => "price"))
       %th= link_to("rating", refrigerators_path(:sort => "rating"))
       %th= link_to("popularity", refrigerators_path(:sort => "popularity"))
@@ -30,6 +31,7 @@
     - @refrigerators.each do |r|
       %tr
         %td{:class => "refrigeratorname"}= link_to(r.name, refrigerator_path(r))
+        %td= r.brand
         %td= number_to_currency(r.price)
         %td= r.rating
         %td= r.popularity
