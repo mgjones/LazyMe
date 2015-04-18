@@ -14,7 +14,7 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-04-17T20:56:32-04:00">2015-04-17T20:56:32-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-04-17T23:06:17-04:00">2015-04-17T23:06:17-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.83
+         2.87
        </span>
     </span> hits/line)
   </h2>
@@ -77,13 +77,13 @@
         <td>18</td>
         <td>16</td>
         <td>2</td>
-        <td>7.1</td>
+        <td>7.2</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#40f2546336e7aa1e06403e23beb9f4a46ea900cf" class="src_link" title="app/controllers/reviews_controller.rb">app/controllers/reviews_controller.rb</a></td>
         <td class="red strong">31.25 %</td>
-        <td>30</td>
+        <td>31</td>
         <td>16</td>
         <td>5</td>
         <td>11</td>
@@ -147,7 +147,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>3.8</td>
       </tr>
       
       <tr>
@@ -193,7 +193,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.12
+         3.16
        </span>
     </span> hits/line)
   </h2>
@@ -245,13 +245,13 @@
         <td>18</td>
         <td>16</td>
         <td>2</td>
-        <td>7.1</td>
+        <td>7.2</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#40f2546336e7aa1e06403e23beb9f4a46ea900cf" class="src_link" title="app/controllers/reviews_controller.rb">app/controllers/reviews_controller.rb</a></td>
         <td class="red strong">31.25 %</td>
-        <td>30</td>
+        <td>31</td>
         <td>16</td>
         <td>5</td>
         <td>11</td>
@@ -280,7 +280,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.57
+         2.61
        </span>
     </span> hits/line)
   </h2>
@@ -312,7 +312,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>3.8</td>
       </tr>
       
       <tr>
@@ -765,20 +765,20 @@
           <code class="ruby">            params.each do |p|</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="17">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="30" data-linenumber="17">
+          <span class="hits">30</span>
           
           <code class="ruby">                if ((p[0] != &quot;utf8&quot;) &amp;&amp; (p[0] != &quot;commit&quot;))</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="18">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="18">
+          <span class="hits">22</span>
           
           <code class="ruby">                    if params[p[0].to_sym]</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="19">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="19">
+          <span class="hits">22</span>
           
           <code class="ruby">                        session[p[0].to_sym] = params[p[0].to_sym]</code>
         </li>
@@ -1008,106 +1008,112 @@
         <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">        @review = Review.create(create_update_params)</code>
+          <code class="ruby">        @review = @refrigerator.reviews.build(create_update_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">        @refrigerator.reviews &lt;&lt; @review</code>
+          <code class="ruby">        @review.refrigerator_id = params[:refrigerator_id]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">        if @review.save!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
-          
-          <code class="ruby">            flash[:notice] = &#39;Review successfully created.&#39;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="18">
           
           
+          <code class="ruby">            flash[:notice] = &#39;Review successfully created.&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
           <code class="ruby">            redirect_to refrigerator_path(params[:refrigerator_id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">        else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="21">
           
           
           <code class="ruby">            flash[:notice] = &#39;Could not create new review.&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="22">
           
           
           <code class="ruby">            redirect_to (new_refrigerator_review_path(@refrigerator))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="25">
           
-          <code class="ruby">    private</code>
+          
+          <code class="ruby">    </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
+          <code class="ruby">    private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
           <code class="ruby">        def create_update_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby">            params.require(:review).permit(:icecubes, :description)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">        end</code>
+          <code class="ruby">            params.require(:review).permit(:icecubes, :description, :refrigerator_id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
@@ -1371,8 +1377,8 @@
           <code class="ruby">      filtering_params.each do |key, value|</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="8">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="13" data-linenumber="8">
+          <span class="hits">13</span>
           
           <code class="ruby">        results = results.public_send(key, value) if value.present?</code>
         </li>
@@ -1446,7 +1452,7 @@
         <li class="covered" data-hits="2" data-linenumber="4">
           <span class="hits">2</span>
           
-          <code class="ruby">  has_many :reviews, foreign_key:  &quot;refrigerator_id&quot;</code>
+          <code class="ruby">  has_many :reviews #, foreign_key:  &quot;refrigerator_id&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -1638,7 +1644,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    belongs_to :refrigerator, foreign_key: &quot;refrigerator_id&quot;</code>
+          <code class="ruby">    belongs_to :refrigerator #, foreign_key: &quot;refrigerator_id&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
