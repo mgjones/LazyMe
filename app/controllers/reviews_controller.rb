@@ -10,8 +10,9 @@ class ReviewsController < ApplicationController
     
     def create 
         @refrigerator = Refrigerator.find(params[:refrigerator_id])
-        @review = Review.create(create_update_params)
-        @refrigerator.reviews << @review
+        @review = @refrigerator.reviews.build(create_update_params)
+        @review.refrigerator_id = params[:refrigerator_id]
+
         if @review.save!
 
             flash[:notice] = 'Review successfully created.'
@@ -24,7 +25,7 @@ class ReviewsController < ApplicationController
     
     private
         def create_update_params
-            params.require(:review).permit(:icecubes, :description)
+            params.require(:review).permit(:icecubes, :description, :refrigerator_id)
         end
 
 end

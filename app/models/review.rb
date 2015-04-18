@@ -1,6 +1,6 @@
 class Review < ActiveRecord::Base
 
-    belongs_to :refrigerator, foreign_key: "refrigerator_id"
+    belongs_to :refrigerator #, foreign_key: "refrigerator_id"
     # changes that can be made to the review itself
     def index
         @reviews = Review.all(params[:refrigerator_id])
