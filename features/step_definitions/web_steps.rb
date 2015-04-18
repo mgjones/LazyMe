@@ -67,12 +67,6 @@ When(/^i go to the refrigerator page$/) do
   visit path_to("refrigerator page")
 end
 
-<<<<<<< HEAD
-=======
-#When /^(?:|I )press "([^"]*)"$/ do |button|
-#  click_button(button)
-#end
->>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
