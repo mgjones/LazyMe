@@ -1,6 +1,6 @@
 class Refrigerator < ActiveRecord::Base
   include Filterable
- 
+
   has_many :reviews, foreign_key:  "refrigerator_id"
 
   scope :price, ->(price) { where("price >= ?", price) }

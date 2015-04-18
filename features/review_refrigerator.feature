@@ -3,15 +3,19 @@ Feature: Create Review
     so that I can add comments about refrigerators I don't like
     I want to be able to rate and comment refrigerators
 
-    Scenario: Go to the review page
-        When I go to the refrigerator page
-        When I press "Create a Review"
-        Then I should be on the "Create a Review" page
+    Background:
+    Given this Refrigerator:
+    |name                   |price      |rating     |popularity     |keyfeatures    |
+    |George Foreman Fridge  |999.00     |5.0        |0.0            |built in grill |
 
-    Scenario: Rating and reviewing a refrigerator
-        When I go to the "Create a Review" page
-        When I fill in "Cube Rating" with "2"
-        And I fill in "Write Your Review" with "This is an average refrigerator"
+    Scenario: Making a Review
+        When I go to the refrigerators page
+        And I click "George Foreman Fridge" link
+        And I should see "Detail for George Foreman Fridge"
+        When I follow "Create a review"
+        And I fill in "Cube Rating" with "2"
+        And I fill in "Write Your Review" with "this is an average refrigerator"
         And I press "Submit This Review"
-        Then I should be on the refrigerator page
-        And I should see the new review listed under "All Product Reviews"
+        Then I should see "Detail for George Foreman Fridge"
+        And I should see "All Product Reviews"
+        
