@@ -67,13 +67,27 @@ When(/^i go to the refrigerator page$/) do
   visit path_to("refrigerator page")
 end
 
+<<<<<<< HEAD
+=======
 #When /^(?:|I )press "([^"]*)"$/ do |button|
 #  click_button(button)
 #end
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
+
+###  ###
+When /^(?:|I )follow the link "(.*?)"$/ do |press|
+  click_link(press)
+end
+###
+
+And /(?:|I )click "(.*?)" link$/ do |arg1|
+  click_link(arg1)
+end
+
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)
@@ -82,6 +96,19 @@ end
 When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
   fill_in(field, :with => value)
 end
+
+## Making a background table ##
+
+Given /^this Refrigerator:$/i do |table|
+  table.hashes.each do |j|
+    if j.has_key? "name"
+        j["name"] = j.delete("name")
+    end
+    Refrigerator.create!(j)
+  end
+end
+  
+
 
 # Use this to fill in an entire form with data from a table. Example:
 #
@@ -273,9 +300,9 @@ Then /^show me the page$/ do
 end
 
 
-
+## needed for showing list of reviews ##
 Then /^I should see the new review listed under "(.*?)"$/ do |arg1|
-  
+
   pending # express the regexp above with the code you wish you had
 end
 

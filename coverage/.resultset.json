@@ -1,6 +1,17 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
+      "/home/csvm/LazyMe/lazyme/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+=======
       "/home/csvm/Desktop/cosc480/LazyMe/app/models/user.rb": [
         1,
         null,
@@ -10,6 +21,7 @@
         null,
         null,
         1,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         0,
         0,
         0,
@@ -17,6 +29,25 @@
         null,
         null
       ],
+<<<<<<< HEAD
+      "/home/csvm/LazyMe/lazyme/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/helpers/refrigerators_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/helpers/reviews_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/helpers/searchs_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/controllers/refrigerators_controller.rb": [
+=======
       "/home/csvm/Desktop/cosc480/LazyMe/app/helpers/application_helper.rb": [
         1,
         null
@@ -26,6 +57,7 @@
         null
       ],
       "/home/csvm/Desktop/cosc480/LazyMe/app/helpers/reviews_helper.rb": [
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         1,
         null
       ],
@@ -35,9 +67,7 @@
       ],
       "/home/csvm/Desktop/cosc480/LazyMe/app/controllers/refrigerators_controller.rb": [
         1,
-        null,
-        1,
-        1,
+<<<<<<< HEAD
         null,
         1,
         0,
@@ -50,10 +80,31 @@
         null,
         1,
         0,
+=======
+        null,
+        1,
+        1,
+        null,
+        1,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         0,
         0,
         0,
         null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        1,
         0,
         null,
         null,
@@ -61,10 +112,31 @@
         null,
         null,
         1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/controllers/application_controller.rb": [
+        1,
+<<<<<<< HEAD
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/controllers/reviews_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        0,
         0,
         null,
         null,
-        1,
+=======
         null,
         null,
         null,
@@ -72,62 +144,132 @@
         1,
         null,
         null,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         null,
         null,
         null
       ],
       "/home/csvm/Desktop/cosc480/LazyMe/app/controllers/application_controller.rb": [
         1,
+        0,
+        0,
+        0,
         null,
+<<<<<<< HEAD
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+=======
         null,
         1,
         null
       ],
       "/home/csvm/Desktop/cosc480/LazyMe/app/controllers/reviews_controller.rb": [
         1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         null,
         null,
         1,
         1,
         0,
+        0,
         null,
         null,
+        null,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/controllers/searchs_controller.rb": [
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null,
+<<<<<<< HEAD
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/models/refrigerator.rb": [
+=======
+        null,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
+        1,
+        1,
+        0,
+        null,
+        1,
+        null,
+<<<<<<< HEAD
+        1,
+=======
         null
       ],
       "/home/csvm/Desktop/cosc480/LazyMe/app/controllers/searchs_controller.rb": [
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/models/concerns/filterable.rb": [
         1,
         1,
         null,
-        null,
-        null,
         1,
+        1,
+        0,
+        0,
+        0,
         null,
+        0,
         null,
         null,
         null
       ],
+<<<<<<< HEAD
+      "/home/csvm/LazyMe/lazyme/app/models/review.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+=======
       "/home/csvm/Desktop/cosc480/LazyMe/app/models/refrigerator.rb": [
         1,
         1,
@@ -139,8 +281,29 @@
         1,
         1,
         1,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         1,
+        null,
+        null,
+        null,
+        null,
         1,
+<<<<<<< HEAD
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1429299414
+  },
+  "Cucumber Features": {
+    "coverage": {
+      "/home/csvm/LazyMe/lazyme/app/models/user.rb": [
+=======
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         1,
         null,
         1,
@@ -165,6 +328,14 @@
         1,
         null,
         1,
+<<<<<<< HEAD
+        7,
+        null,
+        7,
+        1,
+        0,
+        null,
+=======
         1,
         0,
         0,
@@ -178,6 +349,7 @@
       "/home/csvm/Desktop/cosc480/LazyMe/app/models/review.rb": [
         1,
         null,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         1,
         null,
         1,
@@ -185,13 +357,27 @@
         null,
         null,
         null,
+<<<<<<< HEAD
+        7,
+        3,
+        19,
+        13,
+        13,
+        null,
+        0,
+=======
         1,
         null,
         null,
         null,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         null,
         1,
         null,
+<<<<<<< HEAD
+        null,
+        null,
+=======
         null,
         null,
         null,
@@ -205,8 +391,15 @@
     "coverage": {
       "/home/csvm/Desktop/cosc480/LazyMe/app/models/user.rb": [
         1,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         null,
+        7,
+        2,
         null,
+<<<<<<< HEAD
+        null,
+        7,
+=======
         1,
         null,
         null,
@@ -222,10 +415,16 @@
       "/home/csvm/Desktop/cosc480/LazyMe/app/controllers/searchs_controller.rb": [
         1,
         1,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         null,
         null,
         null,
         1,
+<<<<<<< HEAD
+        1,
+        null,
+=======
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
         null,
         null,
         null,
@@ -271,12 +470,26 @@
       ],
       "/home/csvm/Desktop/cosc480/LazyMe/app/controllers/refrigerators_controller.rb": [
         1,
+        1,
         null,
         1,
         7,
         null,
         7,
         1,
+<<<<<<< HEAD
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        7,
+        7,
+=======
         0,
         null,
         1,
@@ -286,9 +499,16 @@
         null,
         7,
         4,
+<<<<<<< HEAD
         30,
         22,
         22,
+=======
+        29,
+        21,
+        21,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
+>>>>>>> upstream/master
         null,
         0,
         null,
@@ -305,9 +525,84 @@
         null,
         null,
         1,
+<<<<<<< HEAD
+        1,
+        null,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/models/concerns/filterable.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        6,
+=======
+        0,
+        null,
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
+        null,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/models/review.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
         0,
         null,
         null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/csvm/LazyMe/lazyme/app/controllers/reviews_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
         null,
         null,
         null
@@ -360,6 +655,14 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1429326377
+=======
+<<<<<<< HEAD
+    "timestamp": 1429325604
+=======
+    "timestamp": 1429318592
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
+>>>>>>> upstream/master
   }
 }

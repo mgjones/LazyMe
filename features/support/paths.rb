@@ -29,9 +29,13 @@ module NavigationHelpers
 
     when /^refrigerator page$/
       refrigerator_path(:id) ## was id:1
+    when /^refrigerators page$/
+      refrigerators_path(:id)
+    when /^new review page$/
+      new_refrigerator_review_path(:refrigerator_id)
       
-
     else
+
       begin
         page_name =~ /^the (.*) page$/
         path_components = $1.split(/\s+/)

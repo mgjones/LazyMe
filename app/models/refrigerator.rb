@@ -1,7 +1,12 @@
 class Refrigerator < ActiveRecord::Base
   include Filterable
+<<<<<<< HEAD
+
+  has_many :reviews, foreign_key:  "refrigerator_id"
+=======
  
   has_many :reviews #, foreign_key:  "refrigerator_id"
+>>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
 
   scope :price, ->(price) { where("price >= ?", price) }
   scope :min, ->(min) { where("price >= ?", min) }
