@@ -8,22 +8,26 @@
       Key word
       =text_field_tag(:key_word) |
     %br
-      Price
-      =text_field_tag(:price)
-    %br
+    %tr
+      %td
+        Min Price
+        =text_field_tag(:min)
+      %td  
+        Max Price
+        =text_field_tag(:max)
+    %br  
       Brand
       =text_field_tag(:brand)
     %br
       Key feature
       =text_field_tag(:key_features)
     %br
-      Rating
-      =text_field_tag(:rating)
-    
+      Min Rating
+      =text_field_tag(:rating)  
     %br
       Popularity
       =text_field_tag(:popularity)
-    
+      
     %br.filter
       =submit_tag "Filter"
 

@@ -3,7 +3,8 @@
     %p=flash[:notice]
   - elsif flash[:warning]
     %p= flash[:warning]  
-
+  
+  - @refrigerator.popularity_update
 
   %h3 Detail for #{@refrigerator.name}
 
@@ -31,10 +32,13 @@
       
     
     %table.reviews
-      %tr All Product Reviews
+      %tr
+        %th description
+        %th ice cube rating
       -@refrigerator.reviews.each do |i|
-        %td=i.description
-        %td=i.icecubes
+        %tr
+          %td=i.attributes.values[3]
+          %td=i.icecubes
 
 
     =link_to "View All Reviews for this Product", refrigerator_reviews_path(@refrigerator)
