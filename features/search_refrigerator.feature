@@ -7,7 +7,7 @@ Feature: Search refrigerator
   Scenario: Search Refrigerator
     When I go to the searchs page
     And I fill in "looking_for" with "refrigerator"
-    And I press "Filter"
+    And I press "Search"
     Then I should be on the refrigerators page
 
   Scenario: Advanced Search
