@@ -7,7 +7,7 @@ Feature: Search refrigerator
   Scenario: Search Refrigerator
     When I go to the searchs page
     And I fill in "looking_for" with "refrigerator"
-    And I press "Search"
+    And I press "Filter"
     Then I should be on the refrigerators page
 
   Scenario: Advanced Search
@@ -27,11 +27,9 @@ Feature: Search refrigerator
     Then I should be on the refrigerators page
     #And I should see "George Foreman Fridge"
     And I should not see "Washer-3004"
-<<<<<<< HEAD
-=======
 
   Scenario: empty search
    When I go to the searchs page
    And I fill in "looking_for" with ""
    Then I should be on the searchs page
->>>>>>> faccdcdb161c001905138b6117a3e9cb48a72a81
+
