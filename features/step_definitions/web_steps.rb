@@ -49,6 +49,12 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^these Users:$/ do |table|
+  table.hashes.each do |h|
+    User.create!(h)
+  end
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -61,9 +67,9 @@ When(/^i go to the refrigerator page$/) do
   visit path_to("refrigerator page")
 end
 
-When /^(?:|I )press "([^"]*)"$/ do |button|
-  click_button(button)
-end
+#When /^(?:|I )press "([^"]*)"$/ do |button|
+#  click_button(button)
+#end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)

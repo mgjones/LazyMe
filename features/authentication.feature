@@ -5,24 +5,24 @@ Feature: log_in and log_out
 
   Background: the LazyMe website has some users
     Given these Users:
-      | email         |   encrypted_password|
-      | nolan         | 12345678            |
+      | email                    |password|
+      | nolan@colgate.edu        |12345678|
       
 
     Scenario: Sign in
       When I go to the searchs page
       And I follow "Log in"
       Then I should be on the new user session page
-      And I fill in "email" with "nolan"
-      And I fill in "password" with "12345678"
-      And I press "Sign In"
-      Then I should be on the searchs page
-      And I should see "nolan"
+      And I fill in "user_email" with "nolan@colgate.edu"
+      And I fill in "user_password" with "12345678"
+      And I press "Log in"
+      Then I should be on the home page
+      And I should see "nolan@colgate.edu"
 
     Scenario: Sign in with github
       When I go to the new user session page
-      And I follow "Sign in with github"
-      Then I should be on the new user session page 
+      And I follow "Sign in with Github"
+      #Then I should be on the new user session page 
       
   
   
