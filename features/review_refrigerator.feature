@@ -17,5 +17,5 @@ Feature: Create Review
         And I fill in "Write Your Review" with "this is an average refrigerator"
         And I press "Submit This Review"
         Then I should see "Detail for George Foreman Fridge"
-        And I should see "All Product Reviews"
+        And I should see "Review successfully created."
         
