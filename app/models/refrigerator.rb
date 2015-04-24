@@ -1,7 +1,7 @@
 class Refrigerator < ActiveRecord::Base
   include Filterable
  
-  has_many :reviews #, foreign_key:  "refrigerator_id"
+  has_many :reviews
 
   scope :price, ->(price) { where("price >= ?", price) }
   scope :min, ->(min) { where("price >= ?", min) }
@@ -22,7 +22,19 @@ class Refrigerator < ActiveRecord::Base
   def self.search(input)
     return Refrigerator.where("name like ?", "%#{input}%")
   end
+=begin
+  def votes
+    return 
+  end
 
+  def has_reviews
+    if @review.attribute_names[3] > 1
+      return true
+    else
+      return false
+    end
+  end
+=end
   def popularity_update
     self.popularity = self.popularity + 1
     self.save

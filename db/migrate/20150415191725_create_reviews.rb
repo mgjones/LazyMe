@@ -6,4 +6,5 @@ class CreateReviews < ActiveRecord::Migration
       t.text :description
     end
   end
+
 end

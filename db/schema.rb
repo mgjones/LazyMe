@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416021117) do
+ActiveRecord::Schema.define(version: 20150424005927) do
 
   create_table "refrigerators", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20150416021117) do
     t.integer "refrigerator_id"
     t.integer "icecubes"
     t.text    "description"
+    t.integer "upvote"
+    t.integer "downvote"
   end
 
   create_table "users", force: :cascade do |t|
