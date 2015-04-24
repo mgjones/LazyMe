@@ -4,6 +4,8 @@ class Review < ActiveRecord::Base
     # changes that can be made to the review itself
     def index
         @reviews = Review.all(params[:refrigerator_id])
+        @reviews = refrigerator.reviews
+        @review = Review.new
     end
 
     #this can't possibly be correct ...

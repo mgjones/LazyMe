@@ -3,13 +3,14 @@ Rails.application.routes.draw do
     { omniauth_callbacks: "omniauth_callbacks" }
   root 'searchs#index'
 
-  resources :searchs
+  resources :searchs, :refrigerators
+
 
   resources :refrigerators do
     resources :reviews, :only => [:create,:new]
   end
 
-  
+
   get '/filter' => 'refrigerators#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
