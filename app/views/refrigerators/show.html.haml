@@ -41,7 +41,12 @@
         %tr
           %td=i.attributes.values[3]
           %td=i.icecubes
-      -##
+      -if @refrigerator.has_reviews == true
+        %tr
+          %td
+          %td
+          %td= button_to "upvote", refrigerator_path(@refrigerator), :method => "get"
+          %td= button_to "downvote", refrigerator_path(@refrigerator), :method => "get"
       -#if @refrigerator.has_reviews == true
         %tr
           %td

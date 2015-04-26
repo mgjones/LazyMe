@@ -22,19 +22,22 @@ class Refrigerator < ActiveRecord::Base
   def self.search(input)
     return Refrigerator.where("name like ?", "%#{input}%")
   end
+  
 =begin
   def votes
     return 
   end
+=end
 
   def has_reviews
-    if @review.attribute_names[3] > 1
+    @reviews = Refrigerator.review(@refrigerator)
+    if @reviews > 1
       return true
     else
       return false
     end
   end
-=end
+
   def popularity_update
     self.popularity = self.popularity + 1
     self.save
