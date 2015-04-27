@@ -26,6 +26,8 @@
           %td.popularity=@refrigerator.popularity
     %br
     %br
+    %p=link_to "Add to Cart", new_shopping_cart_path(refri_id:params[:id])
+    %p=link_to "Cart", shopping_cart_path
 
     %table.review_table
       %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
@@ -35,10 +37,10 @@
       %tr
         %th description
         %th ice cube rating
-      -@refrigerator.reviews.each do |i|
-        %tr
-          %td=i.attributes.values[3]
-          %td=i.icecubes
+  -#   -@refrigerator.reviews.each do |i|
+  -#      %tr
+  -#       %td=i.attributes.values[3]
+  -#       %td=i.icecubes
 
 
     =link_to "View All Reviews for this Product", refrigerator_reviews_path(@refrigerator)

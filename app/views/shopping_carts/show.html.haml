@@ -1,0 +1,26 @@
+#main
+  - if flash[:notice]
+    %p=flash[:notice]
+  - elsif flash[:warning]
+    %p= flash[:warning]  
+  
+  
+
+  %h3 Shopping Cart
+
+  %p 
+    
+    %table.cart_item_table
+      %tr.cart_item_header
+        %th Name
+        
+       
+      - @spc.each do |r|
+        %tr
+          
+          %td.id=Refrigerator.find(r.item_id).name
+          %td.remove=link_to "Remove from cart", shopping_cart_item_path(item_id:(r.id)), method:"delete"
+              
+
+
+=link_to "Back to Search Results", refrigerators_path
