@@ -1,7 +1,6 @@
 #review
 
     =form_for [@refrigerator, @review], :method => :post do |item|
-
         .field
             =item.label :icecubes, "Cube Rating"
             =item.number_field :icecubes, :in => 1..5

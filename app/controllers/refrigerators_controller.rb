@@ -36,10 +36,13 @@ class RefrigeratorsController < ApplicationController
         @refrigerator = Refrigerator.find(params[:id])
 
     end    
-        
-    def review
-        #do_something
-    end
-      
 
+    def show_reviews
+        @reviews = Refrigerator.find(params[:refrigerator_id]).where.not(description: nil)
+    end
+=begin
+    def reviews
+        @refrigerator = Refrigerator.find(params[:review])
+    end
+=end
 end

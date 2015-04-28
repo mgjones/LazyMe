@@ -29,24 +29,26 @@
 
     %table.review_table
       %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
-      
+
     Product Reviews
     %table.reviews
       %tr
         %th description
         %th ice cube rating
-        %th upvote
-        %th downvote
+        
       -@refrigerator.reviews.each do |i|
         %tr
           %td=i.attributes.values[3]
           %td=i.icecubes
+          %td= button_to "like", refrigerator_path(@refrigerator), remote: true
+          %td= button_to "dislike", refrigerator_path(@refrigerator), remote: true
+
       -if @refrigerator.has_reviews == true
         %tr
           %td
           %td
-          %td= button_to "upvote", refrigerator_path(@refrigerator), :method => "get"
-          %td= button_to "downvote", refrigerator_path(@refrigerator), :method => "get"
+         
+      =@refrigerator.show_reviews
       -#if @refrigerator.has_reviews == true
         %tr
           %td

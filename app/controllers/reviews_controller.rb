@@ -23,6 +23,8 @@ class ReviewsController < ApplicationController
         end
     end
     
+    
+
     private
         def create_update_params
             params.require(:review).permit(:icecubes, :description, :refrigerator_id)
