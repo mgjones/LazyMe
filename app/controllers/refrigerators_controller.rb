@@ -36,6 +36,10 @@ class RefrigeratorsController < ApplicationController
         @refrigerator = Refrigerator.find(params[:id])
 
     end    
-
+        
+    def review
+        #do_something
+    end
+      
 
 end

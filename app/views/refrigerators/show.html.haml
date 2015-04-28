@@ -6,7 +6,7 @@
   
   - @refrigerator.popularity_update
 
-  %h3 Detail for #{@refrigerator.name}
+  %h3 Details for #{@refrigerator.name}
 
   %p
     %table.refrigerator_table
@@ -30,18 +30,32 @@
     %table.review_table
       %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
       
-    
+    Product Reviews
     %table.reviews
       %tr
         %th description
         %th ice cube rating
+        %th upvote
+        %th downvote
       -@refrigerator.reviews.each do |i|
         %tr
           %td=i.attributes.values[3]
           %td=i.icecubes
+      -if @refrigerator.has_reviews == true
+        %tr
+          %td
+          %td
+          %td= button_to "upvote", refrigerator_path(@refrigerator), :method => "get"
+          %td= button_to "downvote", refrigerator_path(@refrigerator), :method => "get"
+      -#if @refrigerator.has_reviews == true
+        %tr
+          %td
+          %td
+          %td=button_to "upvote", refrigerator_path(@refrigerator),:method => "get"
+          %td=button_to "downvote", refrigerator_path(@refrigerator), :method => "get"
 
-
-    =link_to "View All Reviews for this Product", refrigerator_reviews_path(@refrigerator)
+    
+    %p=link_to "View All Reviews for this Product", refrigerator_reviews_path(@refrigerator)
                 
 
 
