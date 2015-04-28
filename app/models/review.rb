@@ -1,23 +1,16 @@
 class Review < ActiveRecord::Base
 
-    belongs_to :refrigerator #, foreign_key: "refrigerator_id"
-    # changes that can be made to the review itself
-    def index
-        @reviews = Review.all(params[:refrigerator_id])
-        @reviews = refrigerator.reviews
-        @review = Review.new
-    end
+    belongs_to :refrigerator
+    
+    
 
-    #this can't possibly be correct ...
-    def icecube
-        ## create rating system
-        #@review = Review.save(:icecubes)
+    def has_reviews
+        @reviews = Refrigerator.review(@refrigerator)
+        if @reviews > 1
+            return true
+        else
+            return false
+        end
     end
-
-    def description
-        #write the review of the refrigerator ?
-        #@refrigerator = Review.create(params[:refrigerator_id])
-        #@refrigerator = Review.all(params[:refrigerator_id])
-    end
-
+   
 end
