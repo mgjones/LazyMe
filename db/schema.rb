@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20150424022532) do
+=======
 ActiveRecord::Schema.define(version: 20150424005927) do
+>>>>>>> upstream/master
 
   create_table "refrigerators", force: :cascade do |t|
     t.string   "name"
@@ -24,13 +28,29 @@ ActiveRecord::Schema.define(version: 20150424005927) do
     t.datetime "updated_at",                           null: false
   end
 
-  create_table "reviews", id: false, force: :cascade do |t|
+  create_table "reviews", force: :cascade do |t|
     t.integer "refrigerators_id"
-    t.integer "refrigerator_id"
     t.integer "icecubes"
     t.text    "description"
     t.integer "upvote"
     t.integer "downvote"
+  end
+
+  create_table "shopping_cart_items", force: :cascade do |t|
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.integer  "quantity"
+    t.integer  "item_id"
+    t.string   "item_type"
+    t.float    "price"
+    t.integer  "refrigerator_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "shopping_carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
