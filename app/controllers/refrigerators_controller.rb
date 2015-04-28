@@ -33,8 +33,9 @@ class RefrigeratorsController < ApplicationController
     end
 
     def show
+        session[:return_to] ||= request.referer
         @refrigerator = Refrigerator.find(params[:id])
-
+        
     end    
         
     def review
