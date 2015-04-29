@@ -26,10 +26,12 @@
           %td.popularity=@refrigerator.popularity
     %br
     %br
+    %p=link_to "Add to Cart", new_shopping_cart_path(refri_id:params[:id])
+    %p=link_to "Cart", shopping_cart_path
 
     %table.review_table
       %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
-      
+
     Product Reviews
     %table.reviews
       %tr
@@ -41,18 +43,25 @@
         %tr
           %td=i.attributes.values[3]
           %td=i.icecubes
+          %td= button_to "like", refrigerator_path(:increment => true, :revid => i.id), :method => "get" #, remote: true
+          =i.upvote
+          %td= button_to "dislike", refrigerator_path(:decrement => true, :revid => i.id), :method => "get" #, remote: true
+          =i.downvote
+
+
       -if @refrigerator.has_reviews == true
         %tr
           %td
           %td
-          %td= button_to "upvote", refrigerator_path(@refrigerator), :method => "get"
-          %td= button_to "downvote", refrigerator_path(@refrigerator), :method => "get"
+         
+      =@refrigerator.show_reviews
       -#if @refrigerator.has_reviews == true
         %tr
           %td
           %td
           %td=button_to "upvote", refrigerator_path(@refrigerator),:method => "get"
           %td=button_to "downvote", refrigerator_path(@refrigerator), :method => "get"
+
 
     
     %p=link_to "View All Reviews for this Product", refrigerator_reviews_path(@refrigerator)

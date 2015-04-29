@@ -1,6 +1,7 @@
 class RefrigeratorsController < ApplicationController
 
     def index
+        byebug()
         @refrigerators = Refrigerator.all
 
         if params[:commit] == "Search"
@@ -33,13 +34,20 @@ class RefrigeratorsController < ApplicationController
     end
 
     def show
+        byebug()
+        session[:return_to] ||= request.referer
         @refrigerator = Refrigerator.find(params[:id])
-
+        @review = Review.find(params[:revid])
+        @review.upvote = params[:increment] ? @review.upvote += 1 : @review.upvote
+        @review.downvote = params[:decrement] ? @review.downvote += 1 : @review.downvote
     end    
-        
-    def review
-        #do_something
-    end
-      
 
+    def show_reviews
+        @reviews = Refrigerator.find(params[:refrigerator_id]).where.not(description: nil)
+    end
+=begin
+    def reviews
+        @refrigerator = Refrigerator.find(params[:review])
+    end
+=end
 end

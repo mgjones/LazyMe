@@ -23,19 +23,17 @@ class Refrigerator < ActiveRecord::Base
     return Refrigerator.where("name like ?", "%#{input}%")
   end
   
-=begin
-  def votes
-    return 
-  end
-=end
-
   def has_reviews
-    @reviews = Refrigerator.review(@refrigerator)
-    if @reviews > 1
-      return true
-    else
+    @reviews = Refrigerator.where.not(description: nil)
+    if @reviews == nil
       return false
+    else
+      return true
     end
+  end
+
+  def show_reviews
+
   end
 
   def popularity_update
