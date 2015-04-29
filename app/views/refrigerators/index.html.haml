@@ -31,11 +31,11 @@
     - @refrigerators.each do |r|
       %tr
         %td{:class => "refrigeratorname"}= link_to(r.name, refrigerator_path(r))
-        %td= r.brand
-        %td= number_to_currency(r.price)
+        %td= r.brand ## these were modified for testing purposes
+        %td= r.model
         %td= r.rating
         %td= r.popularity
-        %td= r.keyfeatures
+        %td= r.volume_cu_ft
         %td= link_to("add", new_refrigerator_path)
       =# (Above)should be a button that adds fridge to my_fridges "cart"
   %br

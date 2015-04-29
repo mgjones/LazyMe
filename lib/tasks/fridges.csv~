@@ -1,4 +1,4 @@
-brand,model,model_variations,configuration,defrost_type,compact?,through_door_dispenser?,automatic_icemaker?,volume_cu_ft,adjusted_volume_cu_ft,kwh_per_year,federal_standard_kwh_per_year,measured_federal_standard_kwh_per_year,percent_better_than_measured_federal_standard,cee_tier,rating,popularity
+brand,model,model_variations,configuration,defrost_type,compact?,through_door_dispenser?,automatic_icemaker?,volume_cu_ft,adjusted_volume_cu_ft,kwh_per_year,federal_standard_kwh_per_year,measured_federal_standard_kwh_per_year,percent_better_than_measured_federal_standard,cee_tier
 Absocold, ARD244A*10R/L ,,Single Door,Automatic,Yes,No,No,2.3,2.3,223,280,280,20%,3
 Absocold, ARD298C*14R ,,Top Freezer,Partial Automatic,Yes,No,No,2.97,3.6,319,357,357,10%,1
 Absocold,ARD1033F*14R/L,,Top Freezer,Automatic,No,No,No,10.3,12.12,297,332,332,10%,1
