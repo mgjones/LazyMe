@@ -35,12 +35,6 @@ ActiveRecord::Schema.define(version: 20150424022532) do
     t.datetime "updated_at",                                                            null: false
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.integer "refrigerators_id"
-    t.integer "icecubes"
-    t.text    "description"
-  end
-
   create_table "shopping_cart_items", force: :cascade do |t|
     t.integer  "owner_id"
     t.string   "owner_type"
