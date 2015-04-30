@@ -5,29 +5,27 @@
 
   =form_tag refrigerators_path,method:"get" do
     %br
-      Key word
-      =text_field_tag(:key_word) |
-    %br
-    %tr
-      %td
-        Min Price
-        =text_field_tag(:min)
-      %td  
-        Max Price
-        =text_field_tag(:max)
     %br  
       Brand
       =text_field_tag(:brand)
-    %br
-      Key feature
-      =text_field_tag(:key_features)
     %br
       Min Rating
       =text_field_tag(:rating)  
     %br
       Popularity
       =text_field_tag(:popularity)
-      
+    %br  
+      Model
+      =text_field_tag(:model)
+    %br
+      Configuration
+      %select{ :name => "configuration", :multiple => true }
+        %option{:value => "Single Door"}= "Single Door"
+        %option{:value => "Side-by-side"}= "Side-by-side"
+        %option{:value => "Top Freezer"}= "Top Freezer"
+        %option{:value => "Bottom Freezer"}= "Bottom Freezer"
+
+      -#=text_field_tag(:configuration)  
     %br.filter
       =submit_tag "Filter"
 

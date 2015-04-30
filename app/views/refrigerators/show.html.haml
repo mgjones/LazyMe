@@ -14,25 +14,23 @@
         %th Model Variations
         %th Configuration
         %th Defrost Type
-        %tr
-          %td.brand=@refrigerator.brand
-          %td.model=@refrigerator.model
-          %td.model_variations=@refrigerator.model_variations
-          %td.configuration=@refrigerator.configuration
-          %td.defrost_type=@refrigerator.defrost_type
-
         %th Compact?
         %th Through Door Dispenser?
         %th Automatic Icemaker?
         %th Volume(cu ft)
         %th KWh/year
         %tr
+          %td.brand=@refrigerator.brand
+          %td.model=@refrigerator.model
+          %td.model_variations=@refrigerator.model_variations
+          %td.configuration=@refrigerator.configuration
+          %td.defrost_type=@refrigerator.defrost_type
           %td.compact=@refrigerator.compact?
           %td.through_door_dispenser=@refrigerator.through_door_dispenser?
           %td.automatic_icemaker=@refrigerator.automatic_icemaker?
           %td.volume_cu_ft=@refrigerator.volume_cu_ft
           %td.kwh_per_year=@refrigerator.kwh_per_year
-        
+    
     %br
     %br
     %p=link_to "Add to Cart", new_shopping_cart_path(refri_id:params[:id])

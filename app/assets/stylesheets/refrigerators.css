@@ -32,14 +32,33 @@ td .add_link{
 }
 
 table.refrigerators_table{
-  background: white;
-  font-weight: 200;
+  background-color: rgb(255,130,255);
+  font-weight: 100;
   padding: 30px;
   border: 15px double black;
 }
 
 a:link{
   color: rgb(0,130,0);
+}
+
+tr:hover{
+  color: red;
+}
+tr:nth-child(1){
+  background: white;
+}
+tr:nth-child(odd){
+  outline-style: inset;
+  background: #b8d1f3;
+  padding: 10px;
+}
+
+tr:nth-child(even){
+  outline-style: inset;
+  outline: thick solid black;
+  background: #dae5f4;;
+  padding: 10px;
 }
 
 a:hover{
