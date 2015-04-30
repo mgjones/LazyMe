@@ -18,7 +18,7 @@
       - @spc.each do |r|
         %tr
           
-          %td.id=Refrigerator.find(r.item_id).name
+          %td.id=Refrigerator.find(r.item_id).model
           %td.remove=link_to "Remove from cart", shopping_cart_item_path(item_id:(r.id)), method:"delete"
               
 

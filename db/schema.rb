@@ -14,20 +14,26 @@
 ActiveRecord::Schema.define(version: 20150424022532) do
 
   create_table "refrigerators", force: :cascade do |t|
-    t.string   "name"
     t.string   "brand"
-    t.decimal  "price",       precision: 10, scale: 2
-    t.decimal  "rating",      precision: 1,  scale: 1
-    t.decimal  "popularity",  precision: 1,  scale: 2
-    t.text     "keyfeatures"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-  end
+    t.string   "model"
+    t.string   "model_variations"
+    t.string   "configuration"
+    t.string   "defrost_type"
+    t.string   "compact?"
+    t.string   "through_door_dispenser?"
+    t.string   "automatic_icemaker?"
+    t.string   "volume_cu_ft"
+    t.string   "adjusted_volume_cu_ft"
+    t.string   "kwh_per_year"
+    t.string   "federal_standard_kwh_per_year"
+    t.string   "measured_federal_standard_kwh_per_year"
+    t.string   "percent_better_than_measured_federal_standard"
+    t.string   "cee_tier"
+    t.decimal  "rating",                                        precision: 1, scale: 1
+    t.decimal  "popularity",                                    precision: 1, scale: 2
+    t.datetime "created_at",                                                            null: false
+    t.datetime "updated_at",                                                            null: false
 
-  create_table "reviews", force: :cascade do |t|
-    t.integer "refrigerator_id"
-    t.integer "icecubes"
-    t.text    "description"
   end
 
   create_table "shopping_cart_items", force: :cascade do |t|

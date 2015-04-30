@@ -7,11 +7,6 @@
   =#%h4= flash[:warning] if flash[:warning]
   
   =form_tag refrigerators_path, :method => :get do
-    =label_tag "price range from"
-    =number_field_tag :min
-    to
-    =number_field_tag :max
-
     =label_tag "rating"
     =number_field_tag :rating
   
@@ -20,22 +15,19 @@
   
   %table.refrigerators_table
     %tr.refrigerators_header
-      %th= link_to("name", refrigerators_path(:sort => "name"))
       %th= link_to("brand", refrigerators_path(:sort => "brand"))
-      %th= link_to("price", refrigerators_path(:sort => "price"))
+      %th= link_to("model", refrigerators_path(:sort => "model"))
       %th= link_to("rating", refrigerators_path(:sort => "rating"))
-      %th= link_to("popularity", refrigerators_path(:sort => "popularity"))
-      %th= link_to("key features", refrigerators_path(:sort => "keyfeatures"))
+      %th= link_to("configuration", refrigerators_path(:sort => "configuration"))
+      %th= link_to("kwh/year", refrigerators_path(:sort => "kwh_per_year"))
 
-      =# not sure if we need description as a property for our fridges(above)
     - @refrigerators.each do |r|
-      %tr
-        %td{:class => "refrigeratorname"}= link_to(r.name, refrigerator_path(r))
-        %td= r.brand
-        %td= number_to_currency(r.price)
+      %tr.row
+        %td{:class => "refrigeratorname"}= link_to(r.brand, refrigerator_path(r))
+        %td= r.model
         %td= r.rating
-        %td= r.popularity
-        %td= r.keyfeatures
+        %td= r.configuration
+        %td= r.kwh_per_year
         %td= link_to("add", new_refrigerator_path)
       =# (Above)should be a button that adds fridge to my_fridges "cart"
   %br
