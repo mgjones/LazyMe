@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150424022532) do
-=======
-ActiveRecord::Schema.define(version: 20150424005927) do
->>>>>>> upstream/master
 
   create_table "refrigerators", force: :cascade do |t|
     t.string   "name"
@@ -29,11 +25,9 @@ ActiveRecord::Schema.define(version: 20150424005927) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "refrigerators_id"
+    t.integer "refrigerator_id"
     t.integer "icecubes"
     t.text    "description"
-    t.integer "upvote"
-    t.integer "downvote"
   end
 
   create_table "shopping_cart_items", force: :cascade do |t|
