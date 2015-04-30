@@ -38,7 +38,9 @@
     %br
     %br
 
-    %p=link_to "Research", "https://www.google.com/#q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
+    %p=link_to "Google Research", "https://www.google.com/#q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
+    %p=link_to "Bing Research", "https://www.bing.com/search?q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
+    %p=link_to "Yahoo Research", "https://search.yahoo.com/search/?p=%s+%s" % [@refrigerator.brand, @refrigerator.model]
 
     -#%table.review_table
     -#  %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
