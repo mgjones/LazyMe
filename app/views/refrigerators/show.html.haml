@@ -35,6 +35,10 @@
     %br
     %p=link_to "Add to Cart", new_shopping_cart_path(refri_id:params[:id])
     %p=link_to "Cart", shopping_cart_path
+    %br
+    %br
+
+    %p=link_to "Research", "https://www.google.com/#q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
 
     -#%table.review_table
     -#  %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
