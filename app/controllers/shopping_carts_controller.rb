@@ -9,7 +9,7 @@ class ShoppingCartsController < ApplicationController
     @shopping_cart.add(params[:refri_id],@shopping_cart.id)
     @shopping_cart.save
     p=Refrigerator.find(params[:refri_id])
-    flash[:notice] = " #{p.name} added to cart successfully"
+    flash[:notice] = " #{p.brand} #{p.model} added to cart successfully"
     redirect_to refrigerators_path #redirect_to session.delete(:return_to)
   end
 
