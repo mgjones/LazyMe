@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/info' => 'pages#info'
+
   devise_for :users, controllers:
     { omniauth_callbacks: "omniauth_callbacks" }
   root 'searchs#index'
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
 
 
   get '/filter' => 'refrigerators#index'
+  get '/update_upvote' => 'reviews#update_upvote', :as => 'update_upvote'
+  get '/update_downvote' => 'reviews#update_downvote', :as => 'update_downvote'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -9,4 +9,12 @@ var like = 0;
         //return vote
    // }
 //}
+var main = function(){
+  $(".refrigeratorname").mouseover(function() {
+      $(this).children(".review").show();
+  }).mouseout(function() {
+      $(this).children(".review").hide();
+  });
+}
 
+$(document).ready(main);

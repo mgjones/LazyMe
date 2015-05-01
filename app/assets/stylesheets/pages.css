@@ -1,0 +1,35 @@
+.info {
+  font-color: black;
+}
+
+p {
+  font-size: 12pt;
+  font-color: black;
+  text-align: left;
+
+}
+
+h1.infoheader {
+  font-size: 18pt;
+  text-align: left;
+}
+
+h2.infoheader {
+  font-size: 16pt;
+  text-align: left;
+}
+
+h3.infoheader {
+  font-size: 15pt;
+  text-align: left;
+}
+
+h4.infoheader {
+  font-size: 14pt;
+  text-align: left;
+}
+
+h5.infoheader {
+  font-size: 13pt;
+  text-align: left;
+}
