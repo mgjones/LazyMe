@@ -5,6 +5,7 @@ Feature: Create Review
 
     Background:
     Given this Refrigerator:
+
     |brand      |model          |rating |configuration  |kwh_per_year|
     |Whirlpool  |WRT134TFD*0*   |N/A    |Top Freezer    |336         |
     
@@ -29,17 +30,21 @@ Feature: Create Review
         And I should see "New review created successfully"
 
     Given this Review:
-    |description    |rating |upvote |downvote   |author     |
-    |Fine           |3      |like   |dislike    |Anonymous  |
-    |               |       |2      |2          |           |
+    |description            |rating |upvote         |downvote           |author     |
+    |Its decent             |4      |like 10        |dislike 2          |Anonymous  |
+
 
 
     Scenario: Like/Dislike a Review
         When I go to the refrigerators page
         And I click "Whirlpool" link
         And I should should see "Other Links"
+        ##may need another line here
         And I should see "-- Reviews --"
         And I should see "1"
+
+    |brand                  |model      |model_variations     |configuration     |defrost_type    |
+    |George Foreman Fridge  |xxx        |yyy                  |side-by-side      |automatic       |
 
     Scenario: Making a Review
         When I go to the refrigerators page
@@ -51,4 +56,5 @@ Feature: Create Review
         And I press "Submit This Review"
         Then I should see "Detail for George Foreman Fridge"
         And I should see "Review successfully created."
+
         
