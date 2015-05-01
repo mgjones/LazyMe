@@ -74,16 +74,10 @@
       %tr.row
         %td= r.description
         %td= r.rating
-        %td.upvote= link_to "like", update_upvote_path(review_id:r.id)
-        %td.downvote= link_to "dislike", update_downvote_path(review_id:r.id)
+        %td.upvote= (link_to "like #{r.upvote}", update_upvote_path(review_id:r.id))
+        %td.downvote= (link_to "dislike #{r.downvote}", update_downvote_path(review_id:r.id))
         %td= r.author
-      %tr
-        %td
-        %td
-        %td=r.upvote
-        %td=r.downvote
-        %td
-    -#%table.review_table
+    -#%table.review_tabl
     -#  %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
 
 

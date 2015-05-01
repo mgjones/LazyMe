@@ -102,16 +102,11 @@ Given /^this Refrigerator:$/i do |table|
   end
 end
 
-def click_link_or_button(locator)
-  find(:link_or_button, locator).click
-end
 
 Given /^this Review:$/i do |table|
   table.hashes.each do |j|
     if j.has_key? "upvote"
-      page.should have_selector(:link_or_button,'like')
-    elsif j.has_key? "downvote"
-      page.should have_selector(:link_or_button,'dislike')
+      
     end
     Review.create!(j)
   end
