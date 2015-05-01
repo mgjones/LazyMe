@@ -9,21 +9,38 @@
       Brand
       =text_field_tag(:brand)
     %br
-      Min Rating
-      =text_field_tag(:rating)  
-    %br
-      Popularity
-      =text_field_tag(:popularity)
-    %br  
       Model
       =text_field_tag(:model)
     %br
       Configuration
-      %select{ :name => "configuration", :multiple => true }
-        %option{:value => "Single Door"}= "Single Door"
-        %option{:value => "Side-by-side"}= "Side-by-side"
-        %option{:value => "Top Freezer"}= "Top Freezer"
-        %option{:value => "Bottom Freezer"}= "Bottom Freezer"
+      =select_tag(:configuration, options_for_select([["Single Door","Single Door"],["Side-by-side","Side-by-side"],["Top Freezer", "Top Freezer"],["Bottom Freezer"]]))
+    %br
+      Defrost Type
+      =select_tag(:defrost_type, options_for_select([["Automatic","Automatic"],["Manual","Manual"],["Partial","Partial"]]))
+    %br
+      Compact
+      =select_tag(:compact?, options_for_select([["Yes","Yes"],["No","No"]]))
+    %br
+      Through Door Dispenser
+      =select_tag(:through_door_dispenser?, options_for_select([["Yes","Yes"],["No","No"]]))
+    %br
+      Automatic Icemaker
+      =select_tag(:automatic_icemaker?, options_for_select([["Yes","No"],["No","No"]]))
+    %br
+      Min Volume(cuft)
+      =number_field_tag(:min_volume)
+    %br
+      Max Volume(cuft)
+      =number_field_tag(:max_volume)
+    %br
+      Max Kilowatt-hour/year
+      =number_field_tag(:max_kwh_per_year)
+    %br
+      Min Rating
+      =number_field_tag(:rating)  
+    %br
+
+      
 
       -#=text_field_tag(:configuration)  
     %br.filter

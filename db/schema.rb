@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501010806) do
+ActiveRecord::Schema.define(version: 20150501222328) do
 
   create_table "refrigerators", force: :cascade do |t|
     t.string   "brand"
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 20150501010806) do
     t.string   "compact?"
     t.string   "through_door_dispenser?"
     t.string   "automatic_icemaker?"
-    t.string   "volume_cu_ft"
+    t.float    "volume_cu_ft"
     t.string   "adjusted_volume_cu_ft"
-    t.string   "kwh_per_year"
+    t.float    "kwh_per_year"
     t.string   "federal_standard_kwh_per_year"
     t.string   "measured_federal_standard_kwh_per_year"
     t.string   "percent_better_than_measured_federal_standard"

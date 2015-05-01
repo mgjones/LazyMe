@@ -10,6 +10,7 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         1,
         1,
         1,
@@ -80,10 +81,28 @@
         null,
         1,
         1,
+=======
+        0,
+        0,
+        0,
         null,
         null,
         null
       ],
+      "/home/csvm/LazyMe/app/controllers/searchs_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+>>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
+        null,
+        null,
+        null
+      ],
+<<<<<<< HEAD
       "/home/csvm/LazyMe/app/models/refrigerator.rb": [
         1,
         1,
@@ -190,10 +209,71 @@
         1,
         0,
         0,
+=======
+      "/home/csvm/LazyMe/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/app/helpers/application_helper.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
         0,
         null,
         0,
         null,
+        null,
+        null
+      ],
+      "/home/csvm/LazyMe/app/helpers/pages_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/app/helpers/refrigerators_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/app/helpers/reviews_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/app/helpers/searchs_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/app/helpers/shopping_carts_helper.rb": [
+        1,
+        null
+      ],
+      "/home/csvm/LazyMe/app/controllers/refrigerators_controller.rb": [
+        1,
+        null,
+        1,
+        4,
+        4,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        4,
+        null,
+        null,
+        4,
+        0,
+        0,
+>>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
+        0,
+        null,
+        null,
+<<<<<<< HEAD
         null,
         null,
         null,
@@ -211,16 +291,42 @@
         0,
         null,
         2,
+=======
+        4,
+        null,
+        4,
+        0,
+        null,
+        4,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+>>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
         null,
         2,
         2,
         null,
+<<<<<<< HEAD
+=======
+        null
+      ],
+      "/home/csvm/LazyMe/app/models/refrigerator.rb": [
+        1,
+        1,
+>>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
         null,
         1,
         null,
         1,
         1,
         1,
+<<<<<<< HEAD
         1,
         1,
         1,
@@ -228,6 +334,21 @@
         0,
         0,
         null,
+=======
+        null,
+        1,
+        4,
+        0,
+        null,
+        4,
+        null,
+        null,
+        1,
+        4,
+        0,
+        null,
+        4,
+>>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
         null,
         null,
         1,
@@ -237,6 +358,7 @@
         0,
         null,
         null,
+<<<<<<< HEAD
         1,
         0,
         0,
@@ -250,11 +372,39 @@
         null,
         1,
         1,
+=======
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/home/csvm/LazyMe/app/models/concerns/filterable.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        4,
+        4,
+        8,
+        null,
+        4,
+>>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
         null,
         null,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1430520034
+=======
+    "timestamp": 1430510478
+>>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
   }
 }

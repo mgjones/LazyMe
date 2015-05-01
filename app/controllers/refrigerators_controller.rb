@@ -2,6 +2,7 @@ class RefrigeratorsController < ApplicationController
 
     def index
         @refrigerators = Refrigerator.all
+        byebug
         if params[:commit] == "Search"
             if params[:looking_for] == ""
                 redirect_to searchs_path
@@ -16,7 +17,7 @@ class RefrigeratorsController < ApplicationController
         if params[:commit] == "Filter"
             session[:rating]=params[:rating]
             session[:popularity]=params[:popularity]
-            @refrigerators = @refrigerators.filter(params.slice(:rating, :popularity))
+            @refrigerators = @refrigerators.filter(params.slice(:brand, :model, :configuration, :defrost_type, :compact?, :through_door_dispenser?, :automatic_icemaker?, :volume_cu_ft, :kwh_per_year, :rating, :popularity))
         else
             
             @refrigerators = @refrigerators.filter({:rating=>session[:rating], :popularity=>session[:popularity]})
