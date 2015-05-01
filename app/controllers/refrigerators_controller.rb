@@ -2,7 +2,6 @@ class RefrigeratorsController < ApplicationController
 
     def index
         @refrigerators = Refrigerator.all
-        byebug
         if params[:commit] == "Search"
             if params[:looking_for] == ""
                 redirect_to searchs_path
