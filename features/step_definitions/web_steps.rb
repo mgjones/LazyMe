@@ -82,10 +82,10 @@ And /(?:|I )click "(.*?)" link$/ do |arg1|
   click_link(arg1)
 end
 
-
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)
 end
+
 
 When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
   fill_in(field, :with => value)
@@ -101,7 +101,22 @@ Given /^this Refrigerator:$/i do |table|
     Refrigerator.create!(j)
   end
 end
-  
+
+def click_link_or_button(locator)
+  find(:link_or_button, locator).click
+end
+
+Given /^this Review:$/i do |table|
+  table.hashes.each do |j|
+    if j.has_key? "upvote"
+      page.should have_selector(:link_or_button,'like')
+    elsif j.has_key? "downvote"
+      page.should have_selector(:link_or_button,'dislike')
+    end
+    Review.create!(j)
+  end
+end
+
 
 
 # Use this to fill in an entire form with data from a table. Example:
@@ -149,6 +164,15 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
     assert page.has_content?(text)
   end
 end
+
+When(/^I should should see "(.*?)"$/) do |arg1|
+  if page.respond_to? :should
+    page.should have_content(arg1)
+  else
+    assert page.has_content?(arg1)
+  end
+end
+
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   regexp = Regexp.new(regexp)

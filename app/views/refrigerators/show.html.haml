@@ -59,24 +59,29 @@
     %p.cart=link_to "Add to My Fridges", new_shopping_cart_path(refri_id:params[:id])
     %p.cart=link_to "My Fridges", shopping_cart_path
     %br
-
-  %h2.review Reviews
+  
+  %h2.reviews -- Reviews --
   %p.create_review=link_to "Create a Review", new_review_path(refrigerator_id:params[:id])
   %table.review_table
     %tr.review_header
       %th Review
       %th Rating
-      %th Upvote
-      %th Downvote
+      %th Yay
+      %th Nay
       %th Author
     - @refrigerator.reviews.each do |r|
       %tr.row
         %td= r.description
         %td= r.rating
-        %td.upvote= link_to r.upvote, update_upvote_path(review_id:r.id)
-        %td.downvote= link_to r.downvote, update_downvote_path(review_id:r.id)
+        %td.upvote= link_to "like", update_upvote_path(review_id:r.id)
+        %td.downvote= link_to "dislike", update_downvote_path(review_id:r.id)
         %td= r.author
- 
+      %tr
+        %td
+        %td
+        %td=r.upvote
+        %td=r.downvote
+        %td
     -#%table.review_table
     -#  %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
 

@@ -3,23 +3,17 @@ Feature: Filter refrigerator
   so that I can look up refrigerator I like
   I want to filter refrigerator by price and by rating
 
-
-  Scenario: Filter by price
-    When I go to the refrigerators page
-    And I fill in "min" with "1000"
-    And I fill in "max" with "4000"
-    And I press "Filter"
-    Then I should be on the refrigerators page
-    #And I should see "Washer-3000"
-    And I should not see "Washer-3004"
-    And I should not see "Washer-3001"
+  Background:
+  Given this Refrigerator:
+    |brand                      |model      |rating |configuration  |kwh_per_year   |
+    |MicroFridge with Safe Plug |2.5MF4RE   |N/A    |Single Door    |227            |
 
   Scenario: Clean Filter
     When I go to the refrigerators page
-    And I fill in "min" with ""
+    And I fill in "Rating" with ""
     And I press "Filter"
 
   Scenario: Show
     When I go to the refrigerators page
-    And I follow "Washer-3000"
-    And I should see "detail"
+    And I follow "MicroFridge with Safe Plug"
+    And I should see "Details for MicroFridge with Safe Plug 2.5MF4RE"
