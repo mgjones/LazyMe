@@ -1,10 +1,15 @@
 #main
+
+
+  %h2.page_name LazyMe
+
   - if flash[:notice]
     %p=flash[:notice]
   - elsif flash[:warning]
     %p= flash[:warning]  
 
-  %h3 Details for #{@refrigerator.brand} #{@refrigerator.model}
+  %h1 Details for
+  %h3.fridge #{@refrigerator.brand} #{@refrigerator.model}
 
   %p
     %table.refrigerator_table
@@ -52,7 +57,9 @@
           %td.downvote= link_to r.downvote, update_downvote_path(review_id:r.id)
           %td= r.author
     %p=link_to "Create Review", new_review_path(refrigerator_id:params[:id])
-
+    %br
+    %p=link_to "Attribute Definitions", pages_info_path
+    %br
     %p=link_to "Google Research", "https://www.google.com/#q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
     %p=link_to "Bing Research", "https://www.bing.com/search?q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
     %p=link_to "Yahoo Research", "https://search.yahoo.com/search/?p=%s+%s" % [@refrigerator.brand, @refrigerator.model]

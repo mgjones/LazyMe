@@ -2,9 +2,16 @@
   =## have this(below) change depending on input
   =## for example, when no search keyword input then "all refrigerators"
   =## else "results"
+
   =javascript_include_tag "refrigerators.js"
+
+
+  %h2.page_name LazyMe
+  %h3.title_header All Refrigerators
+
+
   %p.cart=link_to("Cart", shopping_cart_path(id:session[:cart_id]))
-  %h3 All Refrigerators
+
   =# %h4= flash[:notice] if flash[:notice]
   =#%h4= flash[:warning] if flash[:warning]
   
@@ -14,15 +21,15 @@
   
     =submit_tag 'Filter'
   %br
-  
-  %table.refrigerators_table
-    %tr.refrigerators_header
-      %th= link_to("brand", refrigerators_path(:sort => "brand"))
-      %th= link_to("model", refrigerators_path(:sort => "model"))
-      %th= link_to("rating", refrigerators_path(:sort => "rating"))
-      %th= link_to("configuration", refrigerators_path(:sort => "configuration"))
-      %th= link_to("kwh/year", refrigerators_path(:sort => "kwh_per_year"))
-
+ 
+  %table.searched_table
+    %tr.searched_header
+      %th= link_to("Brand", refrigerators_path(:sort => "brand"))
+      %th= link_to("Model", refrigerators_path(:sort => "model"))
+      %th= link_to("Rating", refrigerators_path(:sort => "rating"))
+      %th= link_to("Configuration", refrigerators_path(:sort => "configuration"))
+      %th= link_to("Kwh/Year", refrigerators_path(:sort => "kwh_per_year"))
+      %th
     - @refrigerators.each do |r|
       %tr.row
         - if r.reviews.first

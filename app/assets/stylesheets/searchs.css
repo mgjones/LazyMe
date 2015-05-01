@@ -3,12 +3,6 @@ body.title {
   font-size: 30pt;
   color: yellow;
   font-weight: 900;
-  text-shadow: 2px 2px 0 gray,
-               2px 2px 0 gray,
-               3px 3px 0 white,
-               4px 4px 0 white,
-               5px 5px 0 white,
-               6px 6px 0 white;
   position: center;
   font-style: normal;
   text-align: center;
@@ -16,4 +10,48 @@ body.title {
   background-size: cover;
   
 }
+h1.title_page{
+  font-size: 56pt;
+  text-align: center;
+}
 
+.header {
+  background: #fff;
+  position: absolute;
+  top: -12px;
+  left -20px;   
+  z-index: 100;
+  width: 135px;
+  display: none;
+  margin-left: 10px;
+  padding: 40px 0 5px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+
+}
+
+h3.ad_se {
+  font-size: 36pt;
+  text-shadow: 2px 4px black;
+}
+
+h1.center_title{
+  font-size: 66pt;
+  color: yellow;
+  text-align: center;
+}
+
+p.a_s{
+  font-size: 12pt;
+  text-align:center;
+}
+
+.s_box{
+  text-align:center;
+}
+
+.searcher{
+  text-align:center;
+  font-size: 16pt;
+  color:yellow;
+}
