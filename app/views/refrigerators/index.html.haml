@@ -41,7 +41,7 @@
             %p.review=r.reviews.order("RANDOM()").first.description
         %td{:class=>"pop_review"}= r.model
         - if r.reviews.first
-          - byebug
+        
           %td= r.reviews.over_all_rating
         - else
           %td N/A
