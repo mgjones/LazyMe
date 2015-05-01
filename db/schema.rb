@@ -33,7 +33,12 @@ ActiveRecord::Schema.define(version: 20150424022532) do
     t.decimal  "popularity",                                    precision: 1, scale: 2
     t.datetime "created_at",                                                            null: false
     t.datetime "updated_at",                                                            null: false
+  end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "refrigerator_id"
+    t.integer "icecubes"
+    t.text    "description"
   end
 
   create_table "shopping_cart_items", force: :cascade do |t|
