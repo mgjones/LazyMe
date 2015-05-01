@@ -2,6 +2,7 @@
   =## have this(below) change depending on input
   =## for example, when no search keyword input then "all refrigerators"
   =## else "results"
+  =javascript_include_tag "refrigerators.js"
   %p.cart=link_to("Cart", shopping_cart_path(id:session[:cart_id]))
   %h3 All Refrigerators
   =# %h4= flash[:notice] if flash[:notice]
@@ -24,9 +25,19 @@
 
     - @refrigerators.each do |r|
       %tr.row
-        %td{:class => "refrigeratorname"}= link_to(r.brand, refrigerator_path(r))
-        %td= r.model
-        %td= r.rating
+        - if r.reviews.first
+          %p.review=r.reviews.order("RANDOM()").first.description
+
+        %td{:class => "refrigeratorname"}
+          = link_to(r.brand, refrigerator_path(r))
+          - if r.reviews.first
+            %p.review=r.reviews.order("RANDOM()").first.description
+        %td{:class=>"pop_review"}= r.model
+        - if r.reviews.first
+          - byebug
+          %td= r.reviews.over_all_rating
+        - else
+          %td N/A
         %td= r.configuration
         %td= r.kwh_per_year
         %td= link_to("Add to Cart", new_shopping_cart_path(refri_id:r.id))
@@ -36,3 +47,5 @@
 
 %br
 =link_to "Back to Search Page", searchs_path, method:"get"
+
+-#%script{:src  => "javascripts/review.js"}

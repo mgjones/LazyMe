@@ -48,8 +48,8 @@
         %tr.row
           %td= r.description
           %td= r.rating
-          %td= r.upvote
-          %td= r.downvote
+          %td.upvote= link_to r.upvote, update_upvote_path(review_id:r.id)
+          %td.downvote= link_to r.downvote, update_downvote_path(review_id:r.id)
           %td= r.author
     %p=link_to "Create Review", new_review_path(refrigerator_id:params[:id])
 

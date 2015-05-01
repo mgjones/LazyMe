@@ -6,7 +6,7 @@ body {
   position: center;
   font-style: normal;
   text-align: center;
-  background: url("iceberg.jpg");
+  /*background: url("iceberg.jpg");*/
   background-size: cover;
   
 }
@@ -83,6 +83,16 @@ a:active{
     border:2px solid #207cca;
     background-color:#207cca;
     color:#fafafa;
+}
+
+.review {
+  display:none;
+  position:absolute;
+  border:1px solid #000;
+  width:100px;
+  height:100px;
+  background-color:#ccc
+
 }
 
 #search p {
