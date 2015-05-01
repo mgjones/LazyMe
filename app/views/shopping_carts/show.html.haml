@@ -1,4 +1,5 @@
 #main
+  
   - if flash[:notice]
     %p=flash[:notice]
   - elsif flash[:warning]
@@ -12,15 +13,22 @@
     
     %table.cart_item_table
       %tr.cart_item_header
-        %th Name
-        
-       
+        %th Model
       - @spc.each do |r|
         %tr
-          
           %td.id=Refrigerator.find(r.item_id).model
           %td.remove=link_to "Remove from cart", shopping_cart_item_path(item_id:(r.id)), method:"delete"
-              
+          
+      - product_ids = getFridges(@spc)
+      %br
+      %h3 Kwh/Year
+      %div= column_chart Refrigerator.where(id: product_ids).group(:model).sum(:kwh_per_year), {library: {hAxis: {title: "model"}, vAxis: {title: "kilowatt-hour"}, title: "Energy Consumption in Kwh/year of fridges" }}
+      %br
+      %h3 Percent Better Than Federal Standard
+      %div= column_chart Refrigerator.where(id: product_ids).group(:model).sum(:percent_better_than_measured_federal_standard), {library: {hAxis: {title: "model"}, vAxis: {title: "percent better than federal standard"}, title: "Percent of Energy Consumption Better than the Federal Standard of Fridges"}}
+      %br
+      %h3 Volume (cu ft)
+      %div= column_chart Refrigerator.where(id: product_ids).group(:model).sum(:volume_cu_ft), {library: {hAxis: {title: "model"}, vAxis: {title: "volume(cuft)"}, title: "Volume Size of Fridges in Cubic Feet"}}
 
 
 =link_to "Back to Search Results", refrigerators_path
