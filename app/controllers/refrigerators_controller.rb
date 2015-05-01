@@ -6,15 +6,25 @@ class RefrigeratorsController < ApplicationController
             if params[:looking_for] == ""
                 redirect_to searchs_path
             else
+                session[:looking_for]=params[:looking_for]
                 @refrigerators = Refrigerator.search(params[:looking_for])
             end
+        else
+            @refrigerators = Refrigerator.search(session[:looking_for])
         end
 
         if params[:commit] == "Filter"
+            session[:rating]=params[:rating]
+            session[:popularity]=params[:popularity]
             @refrigerators = @refrigerators.filter(params.slice(:rating, :popularity))
+        else
+            
+            @refrigerators = @refrigerators.filter({:rating=>session[:rating], :popularity=>session[:popularity]})
         end
-       
-        @refrigerators = params[:sort] ? @refrigerators.sorted_by(params[:sort]) : @refrigerators.sorted_by('name')
+        if params[:sort]
+            session[:sort]=params[:sort]
+        end
+        @refrigerators = session[:sort] ? @refrigerators.sorted_by(session[:sort]) : @refrigerators.sorted_by('name')
         
     end
 

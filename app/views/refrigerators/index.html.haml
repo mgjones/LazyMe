@@ -2,8 +2,12 @@
   =## have this(below) change depending on input
   =## for example, when no search keyword input then "all refrigerators"
   =## else "results"
+
   %h2.page_name LazyMe
   %h3.title_header All Refrigerators
+
+  %p.cart=link_to("Cart", shopping_cart_path(id:session[:cart_id]))
+
   =# %h4= flash[:notice] if flash[:notice]
   =#%h4= flash[:warning] if flash[:warning]
   
@@ -29,7 +33,7 @@
         %td= r.rating
         %td= r.configuration
         %td= r.kwh_per_year
-        %td= link_to("add", new_refrigerator_path)
+        %td= link_to("Add to Cart", new_shopping_cart_path(refri_id:r.id))
       =# (Above)should be a button that adds fridge to my_fridges "cart"
   %br
   %h4.thingstoconsider -- Things To Consider -- 

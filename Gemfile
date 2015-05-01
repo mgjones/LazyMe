@@ -22,6 +22,8 @@ gem 'omniauth'
 
 gem 'omniauth-github'
 
+gem 'chartkick'
+
 gem 'haml-rails'
 gem 'heroku'
 gem "paperclip", "~>4.2"
