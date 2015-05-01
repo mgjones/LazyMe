@@ -2,6 +2,7 @@
   =## have this(below) change depending on input
   =## for example, when no search keyword input then "all refrigerators"
   =## else "results"
+  %p.cart=link_to("Cart", shopping_cart_path(id:session[:cart_id]))
   %h3 All Refrigerators
   =# %h4= flash[:notice] if flash[:notice]
   =#%h4= flash[:warning] if flash[:warning]
