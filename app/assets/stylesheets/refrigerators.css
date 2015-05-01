@@ -6,7 +6,7 @@ body {
   position: center;
   font-style: normal;
   text-align: center;
-  /*background: url("iceberg.jpg");*/
+  background: url("iceberg.jpg");
   background-size: cover;
   
 }
