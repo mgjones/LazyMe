@@ -10,58 +10,73 @@
 
   %h1 Details for
   %h3.fridge #{@refrigerator.brand} #{@refrigerator.model}
+  
+  %div.fridge_stuff
+    %table.refrigerator_info
+      %tr
+        %td="Brand"
+        %td=@refrigerator.brand
+      %tr
+        %td="Model"
+        %td=@refrigerator.model
+      %tr
+        %td="Model Variations" 
+        %td=@refrigerator.model_variations
+      %tr
+        %td="Configuration" 
+        %td=@refrigerator.configuration
+      %tr
+        %td="Defrost Type"
+        %td=@refrigerator.defrost_type
+      %tr
+        %td="Compact?"
+        %td=@refrigerator.compact?
+      %tr
+        %td="Through Door Dispenser?"
+        %td=@refrigerator.through_door_dispenser?
+      %tr
+        %td="Automatic Icemaker?"
+        %td=@refrigerator.automatic_icemaker?
+      %tr
+        %td="Volume (cu ft)"
+        %td=@refrigerator.volume_cu_ft
+      %tr
+        %td="Kilowats/Year"
+        %td=@refrigerator.kwh_per_year
+  
+  %div.other_links 
+    %h2 Other Links
+    %table.other_links
+      %tr
+        %td=link_to "Google Research", "https://www.google.com/#q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
+      %tr
+        %td=link_to "Bing Research", "https://www.bing.com/search?q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
+      %tr
+        %td=link_to "Yahoo Research", "https://search.yahoo.com/search/?p=%s+%s" % [@refrigerator.brand, @refrigerator.model]
 
-  %p
-    %table.refrigerator_table
-      %tr.refrigerator_header
-        %th Brand
-        %th Model
-        %th Model Variations
-        %th Configuration
-        %th Defrost Type
-        %th Compact?
-        %th Through Door Dispenser?
-        %th Automatic Icemaker?
-        %th Volume(cu ft)
-        %th KWh/year
-        %tr
-          %td.brand=@refrigerator.brand
-          %td.model=@refrigerator.model
-          %td.model_variations=@refrigerator.model_variations
-          %td.configuration=@refrigerator.configuration
-          %td.defrost_type=@refrigerator.defrost_type
-          %td.compact=@refrigerator.compact?
-          %td.through_door_dispenser=@refrigerator.through_door_dispenser?
-          %td.automatic_icemaker=@refrigerator.automatic_icemaker?
-          %td.volume_cu_ft=@refrigerator.volume_cu_ft
-          %td.kwh_per_year=@refrigerator.kwh_per_year
-    
-    %br
-    %br
-    %p=link_to "Add to Cart", new_shopping_cart_path(refri_id:params[:id])
-    %p=link_to "Cart", shopping_cart_path
-    %br
-    %br
-    %table.review_table
-      %tr.review_header
-        %th Review
-        %th Rating
-        %th Upvote
-        %th Downvote
-        %th Author
-      - @refrigerator.reviews.each do |r|
-        %tr.row
-          %td= r.description
-          %td= r.rating
-          %td= r.upvote
-          %td= r.downvote
-          %td= r.author
-    %p=link_to "Create Review", new_review_path(refrigerator_id:params[:id])
 
-    %p=link_to "Google Research", "https://www.google.com/#q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
-    %p=link_to "Bing Research", "https://www.bing.com/search?q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
-    %p=link_to "Yahoo Research", "https://search.yahoo.com/search/?p=%s+%s" % [@refrigerator.brand, @refrigerator.model]
+    %br
+    %p.cart=link_to "Add to My Fridges", new_shopping_cart_path(refri_id:params[:id])
+    %p.cart=link_to "My Fridges", shopping_cart_path
+    %br
 
+  %h2.review Reviews
+  %p.create_review=link_to "Create a Review", new_review_path(refrigerator_id:params[:id])
+  %table.review_table
+    %tr.review_header
+      %th Review
+      %th Rating
+      %th Upvote
+      %th Downvote
+      %th Author
+    - @refrigerator.reviews.each do |r|
+      %tr.row
+        %td= r.description
+        %td= r.rating
+        %td= r.upvote
+        %td= r.downvote
+        %td= r.author
+ 
     -#%table.review_table
     -#  %tr=link_to "Create a review", new_refrigerator_review_path(@refrigerator)
 
