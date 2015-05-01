@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    byebug
+    
     p = Review.new(create_update_params) 
     r = Refrigerator.find(params[:review][:refrigerator_id])
     r.reviews << p
@@ -26,6 +26,20 @@ class ReviewsController < ApplicationController
 			flash[:warning] = "New review couldn't be created"
 			redirect_to new_review_path
 		end
+  end
+
+  def update_upvote
+    p=Review.find(params[:review_id])
+    p.upvote+=1
+    p.save
+    redirect_to :back
+  end
+
+  def update_downvote
+    p=Review.find(params[:review_id])
+    p.downvote+=1
+    p.save
+    redirect_to :back
   end
 
   private

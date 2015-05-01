@@ -102,6 +102,16 @@ a:active{
     color:#fafafa;
 }
 
+.review {
+  display:none;
+  position:absolute;
+  border:1px solid #000;
+  width:100px;
+  height:100px;
+  background-color:#ccc
+
+}
+
 #search p {
     font-size: 10pt
 } 
