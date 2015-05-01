@@ -5,7 +5,6 @@ Feature: Create Review
 
     Background:
     Given this Refrigerator:
-<<<<<<< HEAD
     |brand      |model          |rating |configuration  |kwh_per_year|
     |Whirlpool  |WRT134TFD*0*   |N/A    |Top Freezer    |336         |
     
@@ -41,9 +40,6 @@ Feature: Create Review
         And I should should see "Other Links"
         And I should see "-- Reviews --"
         And I should see "1"
-=======
-    |brand                  |model      |model_variations     |configuration     |defrost_type    |
-    |George Foreman Fridge  |xxx        |yyy                  |side-by-side      |automatic       |
 
     Scenario: Making a Review
         When I go to the refrigerators page
@@ -55,5 +51,4 @@ Feature: Create Review
         And I press "Submit This Review"
         Then I should see "Detail for George Foreman Fridge"
         And I should see "Review successfully created."
->>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
         
