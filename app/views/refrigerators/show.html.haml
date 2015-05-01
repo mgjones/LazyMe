@@ -1,11 +1,15 @@
 #main
 
+
+  %h2.page_name LazyMe
+
   - if flash[:notice]
     %p=flash[:notice]
   - elsif flash[:warning]
     %p= flash[:warning]  
 
-  %h3 Details for #{@refrigerator.brand} #{@refrigerator.model}
+  %h1 Details for
+  %h3.fridge #{@refrigerator.brand} #{@refrigerator.model}
 
   %p
     %table.refrigerator_table
