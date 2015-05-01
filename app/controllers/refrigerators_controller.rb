@@ -16,10 +16,20 @@ class RefrigeratorsController < ApplicationController
         if params[:commit] == "Filter"
             session[:rating]=params[:rating]
             session[:popularity]=params[:popularity]
+            session[:brand]=params[:brand]
+            session[:model]=params[:model]
+            session[:configuration]=params[:configuration]
+            session[:defrost_type]=params[:defrost_type]
+            session[:compact?]=params[:compact?]
+            session[:through_door_dispenser?]=params[:through_door_dispenser?]
+            session[:automatic_icemaker?]=params[:automatic_icemaker?]
+            session[:volume_cu_ft]=params[:volume_cu_ft]
+            session[:kwh_per_year]=params[:kwh_per_year]
+
             @refrigerators = @refrigerators.filter(params.slice(:brand, :model, :configuration, :defrost_type, :compact?, :through_door_dispenser?, :automatic_icemaker?, :volume_cu_ft, :kwh_per_year, :rating, :popularity))
         else
             
-            @refrigerators = @refrigerators.filter({:rating=>session[:rating], :popularity=>session[:popularity]})
+            @refrigerators = @refrigerators.filter({:rating => session[:rating], :popularity => session[:popularity], :brand => session[:brand], :model => session[:model], :configuration => session[:configuration], :defrost_type => session[:defrost_type], :compact? => session[:rating], :through_door_dispenser => session[:through_door_dispenser], :automatic_icemaker? => session[:automatic_icemaker?], :volume_cu_ft => session[:volume_cu_ft], :kwh_per_year => session[:kwh_per_year]})
         end
         if params[:sort]
             session[:sort]=params[:sort]
