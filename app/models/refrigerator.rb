@@ -15,6 +15,9 @@ class Refrigerator < ActiveRecord::Base
   end
 
   def self.search(input)
+    if input=="all"
+      return Refrigerator.all
+    end
     return Refrigerator.where("brand like ?", "%#{input}%")
   end
   
