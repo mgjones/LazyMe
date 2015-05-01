@@ -1,18 +1,25 @@
 body {
   font-family: Courier New, Sans-serif;
-  font-size: 30pt;
+  font-size: 12pt;
   color: yellow;
   font-weight: 900;
   position: center;
   font-style: normal;
-  text-align: center;
+  text-align: left;
   background: url("iceberg.jpg");
   background-size: cover;
-  
+}
+
+h3.title_header{
+  font-family: Sans-serif;
+  font-size: 60pt;
+  color: rgb(255,130,255);
+  position: center;
+  text-shadow: 2px 4px black;
 }
 
 body #main {
-  font-size: 20pt;
+  font-size: 16pt;
   color: rgb(255,130,255);
   text-align: center;
 }
@@ -32,10 +39,15 @@ td .add_link{
 }
 
 table.refrigerators_table{
-  background-color: rgb(255,130,255);
-  font-weight: 100;
-  padding: 30px;
-  border: 15px double black;
+  background-color: white;
+  font-size: 12;
+  font-family: Sans-serif;
+  border-radius: 25px;
+  padding: 20px;
+  border-left: -25px;
+  border-right: -25px;
+  width: 10px;
+  border: 6px black;
 }
 
 a:link{
@@ -46,19 +58,18 @@ tr:hover{
   color: red;
 }
 tr:nth-child(1){
-  background: white;
+  background: black;
+  outline-style:inset;
+  outline-color:black;
 }
 tr:nth-child(odd){
-  outline-style: inset;
-  background: #b8d1f3;
+  background: #E0E0E0;
   padding: 10px;
 }
 
 tr:nth-child(even){
-  outline-style: inset;
-  outline: thick solid black;
-  background: #dae5f4;;
-  padding: 10px;
+  background: #ffffff;
+
 }
 
 a:hover{
@@ -88,3 +99,24 @@ a:active{
 #search p {
     font-size: 10pt
 } 
+
+table.searched_table{
+  width: 90%;
+  margin: auto;
+  border-radius: 25px;
+  padding: 20px;
+  border-left: -25px;
+  border-right: -25px;
+  width: 10px;
+  border: 6px black;
+  background-color: white;
+}
+
+tr.searched_header{
+  font-size: 22pt;
+}
+
+tr.row {
+  font-size: 14pt;
+
+}
