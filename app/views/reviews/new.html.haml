@@ -1,0 +1,20 @@
+=form_for @post do |f|
+
+  =f.label :description
+  =f.text_field :description
+
+  =f.label :rating
+  =f.number_field :rating, :step=>0.5
+
+  =f.hidden_field :author, :value=>@author
+  =f.hidden_field :upvote, :value=>0
+  =f.hidden_field :downvote, :value=>0
+  =f.hidden_field :refrigerator_id, :value=>@refri_id
+
+  
+
+  
+
+  
+  
+  =f.submit 

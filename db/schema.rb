@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424022532) do
+ActiveRecord::Schema.define(version: 20150501010806) do
 
   create_table "refrigerators", force: :cascade do |t|
     t.string   "brand"
@@ -36,9 +36,14 @@ ActiveRecord::Schema.define(version: 20150424022532) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "refrigerator_id"
-    t.integer "icecubes"
-    t.text    "description"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "rating"
+    t.integer  "refrigerator_id"
+    t.text     "description"
+    t.string   "author"
+    t.integer  "upvote"
+    t.integer  "downvote"
   end
 
   create_table "shopping_cart_items", force: :cascade do |t|
