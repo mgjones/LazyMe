@@ -3,12 +3,6 @@ body.title {
   font-size: 30pt;
   color: yellow;
   font-weight: 900;
-  text-shadow: 2px 2px 0 gray,
-               2px 2px 0 gray,
-               3px 3px 0 white,
-               4px 4px 0 white,
-               5px 5px 0 white,
-               6px 6px 0 white;
   position: center;
   font-style: normal;
   text-align: center;
@@ -16,23 +10,16 @@ body.title {
   background-size: cover;
   
 }
-
-.dropdown {
-  color: #555;
-  margin: 3px -22px 0 0;
-  width: 143px;
-  position: fixed;
-  height: 17px;
-  right: 0px;
-  top: 0px;
-  
+h1.title_page{
+  font-size: 56pt;
+  text-align: center;
 }
 
 .header {
   background: #fff;
   position: absolute;
   top: -12px;
-  left -20px;
+  left -20px;   
   z-index: 100;
   width: 135px;
   display: none;
@@ -43,45 +30,28 @@ body.title {
 
 }
 
-.dropdown li a {
-  color: #555555;
-  display: block;
-  font-family: arial;
-  font-weight:bold;
-  padding: 6px 15px;
-  cursor: pointer;
-  text-decoration:none;
-
+h3.ad_se {
+  font-size: 36pt;
+  text-shadow: 2px 4px black;
 }
 
-.dropdown li a:hover {
-  background:#155fB0;
-  color:#FFFFFF;
-  text-decoration: none;
+h1.center_title{
+  font-size: 66pt;
+  color: yellow;
+  text-align: center;
 }
 
-a.login {
-  font-size: 11px;
-  line-height: 16px;
-  color: #555;
-  position: absolute;
-  z-index: 110;
-  display: block;
-  padding: 11px 0 0 20px;
-  height: 28px;
-  width: 121px;
-  margin: -11px 0 0 -10px;
-  text-decoration: none;
-  cursor: pointer;
-
+p.a_s{
+  font-size: 12pt;
+  text-align:center;
 }
 
-.dropdown {
-  list-style:none;
-  margin:0px;
-  padding:0px;
-  font-size:16pt;
-  padding: 11px 0 0 0px;
-  border-top: 1px solid #dedede;
+.s_box{
+  text-align:center;
 }
 
+.searcher{
+  text-align:center;
+  font-size: 16pt;
+  color:yellow;
+}

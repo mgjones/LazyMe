@@ -1,11 +1,11 @@
 #search
- 
+  %h1.center_title LazyMe
   =form_tag refrigerators_path,method:"get" do
 
-    I am looking for ...
+    .searcher= "I am looking for ..."
     %br
-    =text_field_tag(:looking_for) 
+    .s_box=text_field_tag(:looking_for) 
     
-    =submit_tag "Search", :class => "search_button"
+    .s_box=submit_tag "Search", :class => "search_button"
   
-  %p=link_to "Advanced Search", search_path(id:1) 
+  %p.a_s=link_to "Advanced Search", search_path(id:1) 

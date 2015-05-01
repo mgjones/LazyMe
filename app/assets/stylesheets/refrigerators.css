@@ -10,6 +10,12 @@ body {
   background-size: cover;
 }
 
+h2.page_name{
+  font-size: 20pt;
+  text-align: left;
+  color: yellow;
+}
+
 h3.title_header{
   font-family: Sans-serif;
   font-size: 60pt;
@@ -84,7 +90,7 @@ a:active{
   padding: 8px 15px;
   background:rgba(255, 255, 255, .5);
   border: 0px solid #dbdbdb;
-  width: 500px
+  width: 500px;
 }
 
 .search_button {
@@ -118,5 +124,17 @@ tr.searched_header{
 
 tr.row {
   font-size: 14pt;
-
 }
+
+tr.refrigerator_table{
+  display:block;
+  height: 50px;
+  vertical-align: text-top;
+}
+
+h3.fridge {
+  color: black;
+  text-align: center;
+  font-size: 34pt;
+}
+
