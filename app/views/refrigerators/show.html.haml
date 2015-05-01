@@ -53,7 +53,8 @@
         %td=link_to "Bing Research", "https://www.bing.com/search?q=%s+%s" % [@refrigerator.brand, @refrigerator.model]
       %tr
         %td=link_to "Yahoo Research", "https://search.yahoo.com/search/?p=%s+%s" % [@refrigerator.brand, @refrigerator.model]
-
+      %tr
+        %td=link_to "Attribute Definitions", pages_info_path
 
     %br
     %p.cart=link_to "Add to My Fridges", new_shopping_cart_path(refri_id:params[:id])

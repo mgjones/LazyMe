@@ -9,13 +9,6 @@
   %h2.page_name LazyMe
   %h3.title_header All Refrigerators
 
-
-<<<<<<< HEAD
-  -#%p=link_to "My Fridges", shopping_cart_path(id:session[:cart_id]) #keeps getting no route matches error
-=======
-  =#%p.cart=link_to("Cart", shopping_cart_path(id:session[:cart_id]))
->>>>>>> e33f1c10e337db2192403db2b04c7e0242a4186b
-
   =# %h4= flash[:notice] if flash[:notice]
   =#%h4= flash[:warning] if flash[:warning]
   
