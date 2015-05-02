@@ -1,21 +1,24 @@
 .info {
-  font-color: black;
+  color: black;
 }
+
+
 
 p {
   font-size: 12pt;
-  font-color: black;
-  text-align: left;
-
+  color: black;
+  text-align: justify;
+  text-indent: 50px;
+  background: #CCFFFF;
 }
 
-h1.infoheader {
+h1.infoheaders {
+  font-size: 26pt;
+  text-align: center;
+}
+
+h2.infoheaders {
   font-size: 18pt;
-  text-align: left;
-}
-
-h2.infoheader {
-  font-size: 16pt;
   text-align: left;
 }
 
@@ -24,9 +27,10 @@ h3.infoheader {
   text-align: left;
 }
 
-h4.infoheader {
+h4.infoheaders {
   font-size: 14pt;
   text-align: left;
+  color: #FF6699;
 }
 
 h5.infoheader {
