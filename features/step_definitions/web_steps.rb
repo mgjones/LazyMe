@@ -104,11 +104,11 @@ end
 
 
 Given /^this Review:$/i do |table|
+  p=Refrigerator.find(1)
+  
   table.hashes.each do |j|
-    if j.has_key? "upvote"
-      
-    end
-    Review.create!(j)
+    r=Review.create(j)
+    p.reviews<<r
   end
 end
 

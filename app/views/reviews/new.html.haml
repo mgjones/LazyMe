@@ -6,7 +6,7 @@
   =f.text_field :description
 
   =f.label :rating
-  =f.number_field :rating, :step=>1
+  =f.number_field :rating, :min=>1, :max=>5, :step=>1
 
   =f.hidden_field :author, :value=>@author
   =f.hidden_field :upvote, :value=>0
