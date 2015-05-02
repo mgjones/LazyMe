@@ -31,21 +31,11 @@ class Refrigerator < ActiveRecord::Base
     return Refrigerator.where("brand like ?", "%#{input}%")
   end
   
-  def has_reviews
-    @reviews = Refrigerator.where.not(description: nil)
-    if @reviews == nil
-      return false
-    else
-      return true
-    end
-  end
+  
 
   def show_reviews
 
   end
 
-  def popularity_update
-    self.popularity = self.popularity + 1
-    self.save
-  end
+  
 end

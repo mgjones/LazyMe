@@ -33,3 +33,5 @@ Feature: Search refrigerator
    And I fill in "looking_for" with ""
    Then I should be on the searchs page
 
+  
+

@@ -9,8 +9,8 @@
   %h2.page_name LazyMe
   %h3.title_header All Refrigerators
 
-  =# %h4= flash[:notice] if flash[:notice]
-  =#%h4= flash[:warning] if flash[:warning]
+  -# %h4= flash[:notice] if flash[:notice]
+  -#%h4= flash[:warning] if flash[:warning]
   
   =form_tag refrigerators_path, :method => :get do
     =label_tag "rating"

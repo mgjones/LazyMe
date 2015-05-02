@@ -1,5 +1,6 @@
 class ShoppingCart < ActiveRecord::Base
   acts_as_shopping_cart
+  
 
   def add(refri_id,shopping_cart_id)
     

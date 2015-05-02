@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe ShoppingCart, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "add method" do
+    it "should handle add item" do
+      
+      p=ShoppingCart.create
+      p.add(2,1)
+      expect(ShoppingCartItem.all).to_not be_nil
+    end
+
+  end
 end
