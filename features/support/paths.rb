@@ -26,6 +26,8 @@ module NavigationHelpers
 
     when /^search page$/
       search_path(id:1)
+    when /^the shopping cart page$/
+      shopping_cart_path(id:1)
 
     when /^refrigerator page$/
       refrigerator_path(:id) ## was id:1

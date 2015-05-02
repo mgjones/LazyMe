@@ -7,17 +7,17 @@ RSpec.describe Refrigerator, type: :model do
     end
 
     it "should call the right underlying ActiveRecord method to do default sort" do
-      expect(Refrigerator).to receive(:order).with("name") 
-      Refrigerator.sorted_by("name")
+      expect(Refrigerator).to receive(:order).with("brand") 
+      Refrigerator.sorted_by("brand")
     end
 
     it "should call the right underlying ActiveRecord method to sort by price" do
-      expect(Refrigerator).to receive(:order).with("price") 
-      Refrigerator.sorted_by("price")
+      expect(Refrigerator).to receive(:order).with("rating") 
+      Refrigerator.sorted_by("rating")
     end
 
     it "should handle the situation when a bogus sort column is given" do
-      expect(Refrigerator).to receive(:order).with("name") 
+      expect(Refrigerator).to receive(:order).with("brand") 
       Refrigerator.sorted_by("bogus_column")
     end
   end
@@ -38,5 +38,5 @@ RSpec.describe Refrigerator, type: :model do
   end
 
 
-  pending "add some examples to (or delete) #{__FILE__}"
+  
 end
